@@ -83,6 +83,20 @@ const RegisterCandidate = () => {
     safety_induction_status: true,
   });
 
+  const [professionalInfo, setProfessionalInfo] = useState({
+    highest_qualification: '',
+    specialization: '',
+    college_university: '',
+    graduation_year: '',
+    current_role: '',
+    experience_years: '0',
+    current_company: '',
+    industry: '',
+    join_date: '',
+    certifications: '',
+    iso_certifications: '',
+  });
+
   // ─── Lifecycle ───────────────────────────────────────────────────────────────
 
   useEffect(() => {
@@ -170,6 +184,20 @@ const RegisterCandidate = () => {
           safety_induction_status: d.safety_induction_status || true,
         });
 
+        setProfessionalInfo({
+          highest_qualification: d.professional_info?.highest_qualification || '',
+          specialization: d.professional_info?.specialization || '',
+          college_university: d.professional_info?.college_university || '',
+          graduation_year: d.professional_info?.graduation_year || '',
+          current_role: d.professional_info?.current_role || '',
+          experience_years: d.professional_info?.experience_years?.toString() || '0',
+          current_company: d.professional_info?.current_company || '',
+          industry: d.professional_info?.industry || '',
+          join_date: d.professional_info?.join_date || '',
+          certifications: d.professional_info?.certifications || '',
+          iso_certifications: d.professional_info?.iso_certifications || '',
+        });
+
         await fetchCandidateCertifications(id);
       } else {
         throw new Error(result.message || 'Failed to fetch candidate data');
@@ -253,6 +281,14 @@ const RegisterCandidate = () => {
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }));
     }
+  };
+
+  const handleProfessionalInfoChange = (e) => {
+    const { name, value } = e.target;
+    setProfessionalInfo((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   // ─── Certificate Handlers ─────────────────────────────────────────────────────
@@ -462,6 +498,13 @@ const RegisterCandidate = () => {
         'Please enter a valid 10-digit phone number';
     }
 
+    if (!professionalInfo.highest_qualification?.trim()) {
+      newErrors.highest_qualification = 'Highest qualification is required';
+    }
+    if (!professionalInfo.current_role?.trim()) {
+      newErrors.current_role = 'Current role is required';
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -490,88 +533,48 @@ const RegisterCandidate = () => {
       medical_expiry_date: formData.medical_expiry_date || '',
       safety_induction_status: formData.safety_induction_status,
     };
-    
+
     console.log('📦 Candidate Payload:');
     console.log(JSON.stringify(candidatePayload, null, 2));
-    
-    // Build certificates payload - REMOVED candidate field, only certification is null
-    const certificatesPayload = certificates.map((cert, index) => {
-      const certData = {
-        certification: null, // Only certification is null, no candidate field
-        certification_type: cert.certification_type,
-        issuer_type: cert.issuer_type,
-        issuer_name: cert.issuer_name,
-        issue_date: cert.issue_date,
-        expiry_date: cert.expiry_date,
-        certificate_number: cert.certificate_number,
-        issuing_authority: cert.issuing_authority || cert.issuer_name,
-        status: 'pending',
-        is_approved: false,
-      };
-      
-      // Add conditional fields
-      if (cert.certification_type === 'Other' && cert.certification_type_other) {
-        certData.certification_type_other = cert.certification_type_other;
-      }
-      
-      if (cert.issuer_type === 'Other' && cert.issuer_type_other) {
-        certData.issuer_type_other = cert.issuer_type_other;
-      }
-      
-      // Add issuer contact fields if provided
-      if (cert.issuer_email) certData.issuer_email = cert.issuer_email;
-      if (cert.issuer_phone) certData.issuer_phone = cert.issuer_phone;
-      if (cert.issuer_website) certData.issuer_website = cert.issuer_website;
-      if (cert.issuer_address) certData.issuer_address = cert.issuer_address;
-      if (cert.issuer_city) certData.issuer_city = cert.issuer_city;
-      if (cert.issuer_state) certData.issuer_state = cert.issuer_state;
-      if (cert.issuer_country) certData.issuer_country = cert.issuer_country;
-      if (cert.issuer_postal_code) certData.issuer_postal_code = cert.issuer_postal_code;
-      if (cert.issuer_description) certData.issuer_description = cert.issuer_description;
-      if (cert.issuer_accreditation_number) certData.issuer_accreditation_number = cert.issuer_accreditation_number;
-      
-      // Add type-specific fields
-      if (cert.certification_type === 'Educational') {
-        if (cert.education_level) certData.education_level = cert.education_level;
-        if (cert.field_of_study) certData.field_of_study = cert.field_of_study;
-        if (cert.grade_or_percentage) certData.grade_or_percentage = cert.grade_or_percentage;
-      } else if (cert.certification_type === 'Training') {
-        if (cert.training_program_name) certData.training_program_name = cert.training_program_name;
-        if (cert.training_duration) certData.training_duration = cert.training_duration;
-        if (cert.training_mode) certData.training_mode = cert.training_mode;
-      } else if (cert.certification_type === 'Experience') {
-        if (cert.job_role) certData.job_role = cert.job_role;
-        if (cert.employment_type) certData.employment_type = cert.employment_type;
-        if (cert.work_responsibilities) certData.work_responsibilities = cert.work_responsibilities;
-      }
-      
-      // Add document info
-      if (cert.selectedFile) {
-        certData.document = cert.selectedFile.name;
-      } else if (cert.existing_document) {
-        certData.document = cert.existing_document;
-      }
-      
-      return certData;
-    });
-    
-    console.log('\n📜 Certificates Payload:');
+    console.log('📌 Professional Info Payload:');
+    console.log(JSON.stringify(professionalInfo, null, 2));
+
+    const certificatesPayload = certificates.map((cert) => ({
+      certification: cert.certification,
+      certification_type: cert.certification_type,
+      certification_type_other: cert.certification_type_other,
+      issuer_type: cert.issuer_type,
+      issuer_type_other: cert.issuer_type_other,
+      issuer_name: cert.issuer_name,
+      issuer_email: cert.issuer_email,
+      issuer_phone: cert.issuer_phone,
+      issuer_website: cert.issuer_website,
+      issuer_address: cert.issuer_address,
+      issuer_city: cert.issuer_city,
+      issuer_state: cert.issuer_state,
+      issuer_country: cert.issuer_country,
+      issuer_postal_code: cert.issuer_postal_code,
+      issuer_description: cert.issuer_description,
+      issuer_accreditation_number: cert.issuer_accreditation_number,
+      issue_date: cert.issue_date,
+      expiry_date: cert.expiry_date,
+      certificate_number: cert.certificate_number,
+      issuing_authority: cert.issuing_authority || cert.issuer_name,
+      status: 'pending',
+      is_approved: false,
+      education_level: cert.education_level,
+      field_of_study: cert.field_of_study,
+      grade_or_percentage: cert.grade_or_percentage,
+      training_program_name: cert.training_program_name,
+      training_duration: cert.training_duration,
+      training_mode: cert.training_mode,
+      job_role: cert.job_role,
+      employment_type: cert.employment_type,
+      work_responsibilities: cert.work_responsibilities,
+    }));
+
+    console.log('📜 Certificates Payload:');
     console.log(JSON.stringify(certificatesPayload, null, 2));
-    
-    console.log('\n📎 Files being uploaded:');
-    let hasFiles = false;
-    certificates.forEach((cert, index) => {
-      if (cert.selectedFile) {
-        console.log(`  - Certificate ${index + 1} Document: ${cert.selectedFile.name} (${(cert.selectedFile.size / 1024 / 1024).toFixed(2)} MB)`);
-        hasFiles = true;
-      }
-    });
-    
-    if (!hasFiles && !isEditMode) {
-      console.log('  ⚠️ No files selected!');
-    } else if (!hasFiles && isEditMode) {
-      console.log('  No new files to upload (keeping existing)');
-    }
     console.log('='.repeat(60));
   };
 
@@ -601,7 +604,7 @@ const RegisterCandidate = () => {
     setError('');
 
     try {
-      // ─── STEP 1: Build candidate JSON payload ───────────────────────────────────
+      // ─── STEP 1: Build candidate payload with professional info and certifications ───
       const candidatePayload = {
         full_name: formData.full_name,
         date_of_birth: formData.date_of_birth,
@@ -620,9 +623,61 @@ const RegisterCandidate = () => {
         safety_induction_status: formData.safety_induction_status,
       };
 
-      console.log('📤 Sending Candidate Payload:', JSON.stringify(candidatePayload, null, 2));
+      const requestData = new FormData();
+      Object.entries(candidatePayload).forEach(([key, value]) => {
+        if (value !== undefined && value !== null) {
+          requestData.append(key, value);
+        }
+      });
 
-      // ─── STEP 2: POST candidate (JSON) ─────────────────────────────────────
+      requestData.append('professional_info', JSON.stringify(professionalInfo));
+
+      const certificationsPayload = certificates.map((cert) => ({
+        certification: cert.certification,
+        certification_type: cert.certification_type,
+        certification_type_other: cert.certification_type_other,
+        issuer_type: cert.issuer_type,
+        issuer_type_other: cert.issuer_type_other,
+        issuer_name: cert.issuer_name,
+        issuer_email: cert.issuer_email,
+        issuer_phone: cert.issuer_phone,
+        issuer_website: cert.issuer_website,
+        issuer_address: cert.issuer_address,
+        issuer_city: cert.issuer_city,
+        issuer_state: cert.issuer_state,
+        issuer_country: cert.issuer_country,
+        issuer_postal_code: cert.issuer_postal_code,
+        issuer_description: cert.issuer_description,
+        issuer_accreditation_number: cert.issuer_accreditation_number,
+        issue_date: cert.issue_date,
+        expiry_date: cert.expiry_date,
+        certificate_number: cert.certificate_number,
+        issuing_authority: cert.issuing_authority || cert.issuer_name,
+        status: 'pending',
+        is_approved: false,
+        education_level: cert.education_level,
+        field_of_study: cert.field_of_study,
+        grade_or_percentage: cert.grade_or_percentage,
+        training_program_name: cert.training_program_name,
+        training_duration: cert.training_duration,
+        training_mode: cert.training_mode,
+        job_role: cert.job_role,
+        employment_type: cert.employment_type,
+        work_responsibilities: cert.work_responsibilities,
+      }));
+
+      requestData.append('certifications', JSON.stringify(certificationsPayload));
+
+      certificates.forEach((cert, index) => {
+        if (cert.selectedFile) {
+          requestData.append(`document_${index}`, cert.selectedFile);
+        }
+      });
+
+      console.log('📤 Sending Candidate Payload:', JSON.stringify(candidatePayload, null, 2));
+      console.log('📤 Sending Professional Info:', JSON.stringify(professionalInfo, null, 2));
+      console.log('📤 Sending Certifications:', JSON.stringify(certificationsPayload, null, 2));
+
       const method = isEditMode ? 'PUT' : 'POST';
       const candUrl = isEditMode
         ? `${BASE_URL}/api/candidate/candidates/${id}/`
@@ -630,8 +685,7 @@ const RegisterCandidate = () => {
 
       const candidateRes = await fetch(candUrl, {
         method,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(candidatePayload),
+        body: requestData,
       });
 
       const candidateData = await candidateRes.json().catch(() => null);
@@ -655,98 +709,6 @@ const RegisterCandidate = () => {
 
       const candidateId = candidateData?.data?.id || id;
       console.log(`✅ Candidate saved with ID: ${candidateId}`);
-
-      // ─── STEP 3: POST each certificate as multipart/form-data ──────────────
-      const certUrl = `${BASE_URL}/api/candidate/certifications/`;
-      const failures = [];
-
-      for (let index = 0; index < certificates.length; index++) {
-        const cert = certificates[index];
-
-        const formDataCert = new FormData();
-        // DO NOT append candidate - removed as requested
-        formDataCert.append('certification', null); // Only certification is null
-        formDataCert.append('certification_type', cert.certification_type);
-        
-        if (cert.certification_type === 'Other' && cert.certification_type_other) {
-          formDataCert.append('certification_type_other', cert.certification_type_other);
-        }
-        
-        formDataCert.append('issuer_type', cert.issuer_type);
-        
-        if (cert.issuer_type === 'Other' && cert.issuer_type_other) {
-          formDataCert.append('issuer_type_other', cert.issuer_type_other);
-        }
-        
-        formDataCert.append('issuer_name', cert.issuer_name);
-        
-        // Issuer contact fields (only if they have values)
-        if (cert.issuer_email) formDataCert.append('issuer_email', cert.issuer_email);
-        if (cert.issuer_phone) formDataCert.append('issuer_phone', cert.issuer_phone);
-        if (cert.issuer_website) formDataCert.append('issuer_website', cert.issuer_website);
-        if (cert.issuer_address) formDataCert.append('issuer_address', cert.issuer_address);
-        if (cert.issuer_city) formDataCert.append('issuer_city', cert.issuer_city);
-        if (cert.issuer_state) formDataCert.append('issuer_state', cert.issuer_state);
-        if (cert.issuer_country) formDataCert.append('issuer_country', cert.issuer_country);
-        if (cert.issuer_postal_code) formDataCert.append('issuer_postal_code', cert.issuer_postal_code);
-        if (cert.issuer_description) formDataCert.append('issuer_description', cert.issuer_description);
-        if (cert.issuer_accreditation_number) formDataCert.append('issuer_accreditation_number', cert.issuer_accreditation_number);
-        
-        formDataCert.append('issue_date', cert.issue_date);
-        formDataCert.append('expiry_date', cert.expiry_date);
-        formDataCert.append('certificate_number', cert.certificate_number);
-        formDataCert.append('issuing_authority', cert.issuing_authority || cert.issuer_name);
-        formDataCert.append('status', 'pending');
-        formDataCert.append('is_approved', false);
-
-        // Type-specific fields
-        if (cert.certification_type === 'Educational') {
-          if (cert.education_level) formDataCert.append('education_level', cert.education_level);
-          if (cert.field_of_study) formDataCert.append('field_of_study', cert.field_of_study);
-          if (cert.grade_or_percentage) formDataCert.append('grade_or_percentage', cert.grade_or_percentage);
-        } else if (cert.certification_type === 'Training') {
-          if (cert.training_program_name) formDataCert.append('training_program_name', cert.training_program_name);
-          if (cert.training_duration) formDataCert.append('training_duration', cert.training_duration);
-          if (cert.training_mode) formDataCert.append('training_mode', cert.training_mode);
-        } else if (cert.certification_type === 'Experience') {
-          if (cert.job_role) formDataCert.append('job_role', cert.job_role);
-          if (cert.employment_type) formDataCert.append('employment_type', cert.employment_type);
-          if (cert.work_responsibilities) formDataCert.append('work_responsibilities', cert.work_responsibilities);
-        }
-
-        if (cert.selectedFile) {
-          formDataCert.append('document', cert.selectedFile);
-        }
-
-        console.log(`📤 Sending Certificate ${index + 1} FormData`);
-        
-        try {
-          const certRes = await fetch(certUrl, {
-            method: 'POST',
-            body: formDataCert,
-          });
-
-          const certData = await certRes.json().catch(() => null);
-
-          if (!certRes.ok) {
-            console.error(`❌ Certificate ${index + 1} failed:`, certData);
-            failures.push({
-              index: index + 1,
-              error: certData?.message || certData?.detail || 'Unknown error',
-            });
-          } else {
-            console.log(`✅ Certificate ${index + 1} created successfully`);
-          }
-        } catch (certErr) {
-          console.error(`❌ Certificate ${index + 1} error:`, certErr);
-          failures.push({ index: index + 1, error: certErr.message });
-        }
-      }
-
-      if (failures.length > 0) {
-        const msg = failures.map((f) => `• Certificate ${f.index}: ${f.error}`).join('\n');
-        throw new Error(`Candidate saved but some certificates failed:\n${msg}`);
-      }
 
       await Swal.fire({
         icon: 'success',
@@ -1340,6 +1302,133 @@ const RegisterCandidate = () => {
                       {errors.emergency_contact_phone}
                     </span>
                   )}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Professional Information */}
+          <div className="register-candidate-section">
+            <h3 className="register-candidate-section__title">
+              <span className="register-candidate-section__title-icon">💼</span>
+              Professional Information
+            </h3>
+            <div className="register-candidate-form__row">
+              <div className="register-candidate-form__col-half">
+                <div className="register-candidate-form__field-group">
+                  <label className="register-candidate-form__label">
+                    Highest Qualification <span className="register-candidate-form__required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className={`register-candidate-form__input ${errors.highest_qualification ? 'register-candidate-form__input--error' : ''}`}
+                    name="highest_qualification"
+                    value={professionalInfo.highest_qualification}
+                    onChange={handleProfessionalInfoChange}
+                    placeholder="Enter highest qualification"
+                    disabled={loading}
+                  />
+                  {errors.highest_qualification && (
+                    <span className="register-candidate-form__error-text">
+                      {errors.highest_qualification}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <div className="register-candidate-form__col-half">
+                <div className="register-candidate-form__field-group">
+                  <label className="register-candidate-form__label">
+                    Current Role <span className="register-candidate-form__required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className={`register-candidate-form__input ${errors.current_role ? 'register-candidate-form__input--error' : ''}`}
+                    name="current_role"
+                    value={professionalInfo.current_role}
+                    onChange={handleProfessionalInfoChange}
+                    placeholder="Enter current role"
+                    disabled={loading}
+                  />
+                  {errors.current_role && (
+                    <span className="register-candidate-form__error-text">
+                      {errors.current_role}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <div className="register-candidate-form__col-half">
+                <div className="register-candidate-form__field-group">
+                  <label className="register-candidate-form__label">College / University</label>
+                  <input
+                    type="text"
+                    className="register-candidate-form__input"
+                    name="college_university"
+                    value={professionalInfo.college_university}
+                    onChange={handleProfessionalInfoChange}
+                    placeholder="Enter college or university"
+                    disabled={loading}
+                  />
+                </div>
+              </div>
+
+              <div className="register-candidate-form__col-half">
+                <div className="register-candidate-form__field-group">
+                  <label className="register-candidate-form__label">Graduation Year</label>
+                  <input
+                    type="number"
+                    className="register-candidate-form__input"
+                    name="graduation_year"
+                    value={professionalInfo.graduation_year}
+                    onChange={handleProfessionalInfoChange}
+                    placeholder="Enter graduation year"
+                    disabled={loading}
+                  />
+                </div>
+              </div>
+
+              <div className="register-candidate-form__col-half">
+                <div className="register-candidate-form__field-group">
+                  <label className="register-candidate-form__label">Current Company</label>
+                  <input
+                    type="text"
+                    className="register-candidate-form__input"
+                    name="current_company"
+                    value={professionalInfo.current_company}
+                    onChange={handleProfessionalInfoChange}
+                    placeholder="Enter current company"
+                    disabled={loading}
+                  />
+                </div>
+              </div>
+
+              <div className="register-candidate-form__col-half">
+                <div className="register-candidate-form__field-group">
+                  <label className="register-candidate-form__label">Industry</label>
+                  <input
+                    type="text"
+                    className="register-candidate-form__input"
+                    name="industry"
+                    value={professionalInfo.industry}
+                    onChange={handleProfessionalInfoChange}
+                    placeholder="Enter industry"
+                    disabled={loading}
+                  />
+                </div>
+              </div>
+
+              <div className="register-candidate-form__col-half">
+                <div className="register-candidate-form__field-group">
+                  <label className="register-candidate-form__label">Join Date</label>
+                  <input
+                    type="date"
+                    className="register-candidate-form__input"
+                    name="join_date"
+                    value={professionalInfo.join_date}
+                    onChange={handleProfessionalInfoChange}
+                    disabled={loading}
+                  />
                 </div>
               </div>
             </div>

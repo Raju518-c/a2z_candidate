@@ -593,7 +593,6 @@ const handleSubmit = async (e) => {
     setError("");
 
     try {
-      // STEP 1: Prepare mentor payload (JSON) - ONLY mentor fields
       const mentorPayload = {
         full_name: formData.full_name,
         phone_number: formData.phone_number,
@@ -607,41 +606,6 @@ const handleSubmit = async (e) => {
 
       console.log('📦 Mentor Payload (JSON):', JSON.stringify(mentorPayload, null, 2));
 
-      // STEP 2: Create/Update mentor FIRST
-      const method = isEditMode ? 'PUT' : 'POST';
-      const mentorUrl = isEditMode
-        ? `${BASE_URL}/api/mentor/mentors/${id}/`
-        : `${BASE_URL}/api/mentor/mentors/`;
-
-      const mentorRes = await fetch(mentorUrl, {
-        method,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(mentorPayload),
-      });
-
-      const mentorData = await mentorRes.json().catch(() => null);
-
-      if (!mentorRes.ok) {
-        if (mentorData?.errors) {
-          const serverErrors = {};
-          Object.keys(mentorData.errors).forEach((key) => {
-            serverErrors[key] = Array.isArray(mentorData.errors[key])
-              ? mentorData.errors[key][0]
-              : mentorData.errors[key];
-          });
-          setErrors(serverErrors);
-          throw new Error('Please check the form for errors');
-        }
-        throw new Error(
-          mentorData?.message ||
-            `Failed to ${isEditMode ? 'update' : 'create'} mentor`
-        );
-      }
-
-      const mentorId = mentorData?.data?.id || id;
-      console.log('✅ Mentor saved. ID:', mentorId);
-
-      // STEP 3: Prepare specializations data
       const specializationsData = specializations.map((spec) => ({
         department_id: parseInt(spec.department_id),
         level_id: parseInt(spec.level_id),
@@ -652,11 +616,11 @@ const handleSubmit = async (e) => {
           : 5,
       }));
 
-      // STEP 4: Prepare certifications data (JSON array, no files)
       const certificationsData = certifications.map((cert) => ({
         certification_type: cert.certification_type,
         certification_type_other: cert.certification_type === 'Other' ? cert.certification_type_other : '',
         certification_name: cert.certification_name,
+        certification_name_other: cert.certification_name_other || '',
         issuer_type: cert.issuer_type,
         issuer_type_other: cert.issuer_type === 'Other' ? cert.issuer_type_other : '',
         issuing_organization: cert.issuing_organization,
@@ -679,26 +643,22 @@ const handleSubmit = async (e) => {
         }),
       }));
 
-      // STEP 5: Create FormData with specializations_data, certifications_data, and files
       const formDataToSend = new FormData();
-      
-      // Add mentor ID
-      formDataToSend.append('mentor', mentorId);
-      
-      // Add specializations_data as JSON string
+      Object.entries(mentorPayload).forEach(([key, value]) => {
+        if (value !== undefined && value !== null) {
+          formDataToSend.append(key, value);
+        }
+      });
+
       formDataToSend.append('specializations_data', JSON.stringify(specializationsData));
-      
-      // Add certifications_data as JSON string
       formDataToSend.append('certifications_data', JSON.stringify(certificationsData));
-      
-      // Add certification files
+
       certifications.forEach((cert, index) => {
         if (cert.selectedFile && cert.selectedFile instanceof File) {
           formDataToSend.append(`certification_document_${index}`, cert.selectedFile);
         }
       });
 
-      // Console log the complete FormData
       console.log('📤 Complete FormData payload:');
       const formDataLog = {};
       formDataToSend.forEach((value, key) => {
@@ -707,7 +667,7 @@ const handleSubmit = async (e) => {
             type: 'File',
             name: value.name,
             size: value.size,
-            mimeType: value.type
+            mimeType: value.type,
           };
         } else {
           formDataLog[key] = value;
@@ -715,27 +675,37 @@ const handleSubmit = async (e) => {
       });
       console.log(JSON.stringify(formDataLog, null, 2));
 
-      // STEP 6: Send the combined request to certifications endpoint
-      const certUrl = `${BASE_URL}/api/mentor/mentor-certifications/`;
-      
-      // Only send certifications request if there are certifications or specializations
-      if (certificationsData.length > 0 || specializationsData.length > 0) {
-        const certRes = await fetch(certUrl, {
-          method: 'POST',
-          body: formDataToSend,
-        });
+      const method = isEditMode ? 'PUT' : 'POST';
+      const endpointPath = isEditMode
+        ? `api/mentor/mentors/${id}/`
+        : 'api/mentor/mentors/';
+      const mentorUrl = new URL(endpointPath, BASE_URL).href;
 
-        const certData = await certRes.json().catch(() => null);
-        console.log('✅ Certification submission response:', certData);
+      const mentorRes = await fetch(mentorUrl, {
+        method,
+        body: formDataToSend,
+      });
 
-        if (!certRes.ok) {
-          throw new Error(
-            certData?.message || 
-            certData?.detail || 
-            'Failed to save certifications and specializations'
-          );
+      const mentorData = await mentorRes.json().catch(() => null);
+
+      if (!mentorRes.ok) {
+        if (mentorData?.errors) {
+          const serverErrors = {};
+          Object.keys(mentorData.errors).forEach((key) => {
+            serverErrors[key] = Array.isArray(mentorData.errors[key])
+              ? mentorData.errors[key][0]
+              : mentorData.errors[key];
+          });
+          setErrors(serverErrors);
+          throw new Error('Please check the form for errors');
         }
+        throw new Error(
+          mentorData?.message ||
+            `Failed to ${isEditMode ? 'update' : 'create'} mentor`
+        );
       }
+
+      console.log('✅ Mentor created with nested specializations and certifications');
 
       await Swal.fire({
         icon: "success",
