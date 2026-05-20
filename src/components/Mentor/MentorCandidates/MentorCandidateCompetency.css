@@ -1,0 +1,2513 @@
+/* Main Wrapper */
+.mcp-wrapper {
+    background: #f8fafc;
+    padding: 20px 24px 40px;
+}
+
+.mcp-section {
+    margin-top: 20px;
+    margin-bottom: 36px;
+}
+
+.mcp-page-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.mcp-page-subtitle {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+/* Header Section */
+.mcp-header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.mcp-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: white;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mcp-back-btn:hover {
+    background: #f8fafc;
+    transform: translateX(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mcp-candidate-info-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.mcp-candidate-avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.mcp-candidate-details h4 {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.mcp-candidate-meta {
+    display: flex;
+    gap: 16px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.mcp-candidate-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Current Level Card */
+.mcp-current-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    padding: 28px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mcp-current-left h2 {
+    margin: 8px 0 4px 0;
+    font-size: 24px;
+}
+
+.mcp-current-left p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.mcp-current-level {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    border: 3px solid white;
+}
+
+/* Journey Container */
+.mcp-journey-container {
+    margin-bottom: 16px;
+}
+
+.mcp-journey {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 0;
+}
+
+.mcp-journey:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mcp-journey.done {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border-left: 4px solid #10b981;
+}
+
+.mcp-journey.current {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-left: 4px solid #3b82f6;
+}
+
+.mcp-journey.locked {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    opacity: 0.8;
+    border-left: 4px solid #9ca3af;
+}
+
+.mcp-journey-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mcp-journey-badge {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #1e293b;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mcp-journey.done .mcp-journey-badge {
+    color: #10b981;
+}
+
+.mcp-journey.current .mcp-journey-badge {
+    color: #3b82f6;
+}
+
+.mcp-journey.locked .mcp-journey-badge {
+    color: #9ca3af;
+}
+
+.mcp-journey-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mcp-current-tag {
+    background: #3b82f6;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Journey Details */
+.mcp-journey-details {
+    background: white;
+    border-radius: 0 0 12px 12px;
+    padding: 24px;
+    margin-top: 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mcp-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.mcp-details-header h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.mcp-status-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.mcp-status-badge.draft {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.mcp-status-badge.completed {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.mcp-status-badge.in_progress {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+/* Score Grid */
+.mcp-score-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.mcp-score-item {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+    border: 1px solid #e2e8f0;
+}
+
+.mcp-score-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.mcp-score-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mcp-score-icon {
+    color: #3b82f6;
+    font-size: 16px;
+}
+
+.mcp-score-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    background: white;
+    padding: 4px 12px;
+    border-radius: 8px;
+    min-width: 50px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+/* Section Styles */
+.mcp-section-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.mcp-section-icon {
+    color: #3b82f6;
+    font-size: 16px;
+}
+
+.mcp-scores-section,
+.mcp-evidence-section,
+.mcp-comments-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+
+/* Evidence Section */
+.mcp-evidence-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.mcp-evidence-list {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 120px;
+    border: 1px dashed #cbd5e1;
+}
+
+.mcp-evidence-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    color: #64748b;
+}
+
+.mcp-evidence-placeholder-icon {
+    font-size: 40px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+.mcp-evidence-placeholder p {
+    margin: 0;
+    font-size: 14px;
+    max-width: 350px;
+    line-height: 1.6;
+}
+
+/* Evidence Items */
+.mcp-evidence-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.mcp-evidence-item {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mcp-evidence-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e1;
+}
+
+.mcp-evidence-item-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.mcp-evidence-item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.mcp-evidence-type-icon.certificate {
+    color: #f59e0b;
+}
+
+.mcp-evidence-type-icon.work-sample {
+    color: #10b981;
+}
+
+.mcp-evidence-type-icon.reference {
+    color: #3b82f6;
+}
+
+.mcp-evidence-type-icon.training {
+    color: #8b5cf6;
+}
+
+.mcp-evidence-item-title {
+    flex: 1;
+}
+
+.mcp-evidence-item-title h6 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.mcp-evidence-type {
+    font-size: 12px;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+/* Verification Badges */
+.mcp-evidence-verification {
+    flex-shrink: 0;
+}
+
+.mcp-evidence-verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: #d1fae5;
+    color: #065f46;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.mcp-evidence-pending-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #fef3c7;
+    color: #92400e;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.mcp-evidence-rejected-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #fee2e2;
+    color: #b91c1c;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.mcp-evidence-item-description {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 4px 0;
+}
+
+.mcp-evidence-item-description p {
+    margin: 0;
+}
+
+/* Evidence Link */
+.mcp-evidence-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #eff6ff;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.mcp-evidence-link-icon {
+    color: #3b82f6;
+    font-size: 14px;
+}
+
+.mcp-evidence-link-text {
+    color: #1e40af;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    word-break: break-all;
+}
+
+.mcp-evidence-link-text:hover {
+    text-decoration: underline;
+}
+
+.mcp-external-icon {
+    font-size: 10px;
+    color: #64748b;
+}
+
+/* Documents */
+.mcp-evidence-documents {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.mcp-evidence-documents-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+.mcp-evidence-document-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mcp-evidence-document-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    background: white;
+    border-radius: 4px;
+    font-size: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.mcp-evidence-document-item svg {
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.mcp-evidence-document-name {
+    flex: 1;
+    color: #334155;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mcp-evidence-document-download {
+    color: #3b82f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mcp-evidence-document-download:hover {
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+/* Evidence Meta */
+.mcp-evidence-item-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: #64748b;
+    padding-top: 8px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.mcp-evidence-submitted-by {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.mcp-evidence-date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Review Comments */
+.mcp-evidence-review-comments {
+    background: #fee2e2;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.mcp-evidence-review-comments strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #b91c1c;
+    font-size: 11px;
+}
+
+.mcp-evidence-review-comments p {
+    margin: 0;
+    color: #7f1d1d;
+    line-height: 1.5;
+}
+
+/* Comments Section */
+.mcp-comments-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.mcp-comment {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.mcp-comment:last-child {
+    margin-bottom: 0;
+}
+
+.mcp-comment strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #475569;
+    font-size: 13px;
+}
+
+.mcp-comment p {
+    margin: 0;
+    color: #1e293b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Meta Info */
+.mcp-meta-info {
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.mcp-meta-info small {
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Loading and Error States */
+.mcp-loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    text-align: center;
+}
+
+.mcp-spinner {
+    font-size: 40px;
+    color: #3b82f6;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+.mcp-spinner-small {
+    font-size: 24px;
+    color: #3b82f6;
+    animation: spin 1s linear infinite;
+    margin-bottom: 12px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mcp-error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    text-align: center;
+    padding: 24px;
+}
+
+.mcp-error-icon {
+    font-size: 48px;
+    color: #dc3545;
+    margin-bottom: 16px;
+}
+
+.mcp-retry-btn {
+    margin-top: 16px;
+    padding: 10px 24px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mcp-retry-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Utility Classes */
+.mcp-muted {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.mcp-label {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mcp-header-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mcp-candidate-info-card {
+        width: 100%;
+    }
+
+    .mcp-current-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .mcp-current-left {
+        text-align: center;
+    }
+
+    .mcp-score-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mcp-evidence-items {
+        grid-template-columns: 1fr;
+    }
+
+    .mcp-journey {
+        padding: 14px;
+    }
+
+    .mcp-journey-left {
+        gap: 12px;
+    }
+
+    .mcp-journey-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .mcp-details-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .mcp-journey-details {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mcp-wrapper {
+        padding: 12px;
+    }
+
+    .mcp-candidate-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .mcp-evidence-item-header {
+        flex-wrap: wrap;
+    }
+
+    .mcp-evidence-verification {
+        width: 100%;
+    }
+
+    .mcp-evidence-item-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .mcp-journey {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .mcp-journey-right {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+
+/* Add to your existing CSS */
+
+.mcp-current-level-details {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.mcp-evidence-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    color: #64748b;
+}
+
+.mcp-no-competency {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.mcp-no-competency-icon {
+    font-size: 48px;
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+
+.mcp-no-competency h4 {
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.mcp-no-competency p {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+
+/* Verification Actions */
+.mcp-evidence-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.mcp-verify-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mcp-verify-btn.approve {
+    background: #10b981;
+    color: white;
+}
+
+.mcp-verify-btn.approve:hover:not(:disabled) {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.mcp-verify-btn.reject {
+    background: #ef4444;
+    color: white;
+}
+
+.mcp-verify-btn.reject:hover:not(:disabled) {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.mcp-verify-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Modal Styles */
+.mcp-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.mcp-modal {
+    background: white;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    animation: slideUp 0.3s ease-out;
+}
+
+.mcp-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.mcp-modal-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.mcp-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #64748b;
+    transition: color 0.2s;
+    line-height: 1;
+    padding: 0;
+}
+
+.mcp-modal-close:hover {
+    color: #1e293b;
+}
+
+.mcp-modal-body {
+    padding: 24px;
+}
+
+.mcp-modal-footer {
+    display: flex;
+    gap: 12px;
+    padding: 20px 24px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Form Styles */
+.mcp-form-group {
+    margin-bottom: 20px;
+}
+
+.mcp-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.mcp-form-group .required {
+    color: #ef4444;
+}
+
+.mcp-form-control {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s;
+    background: white;
+}
+
+.mcp-form-control:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mcp-form-control:read-only {
+    background: #f8fafc;
+    cursor: not-allowed;
+}
+
+textarea.mcp-form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button Styles */
+.mcp-btn-primary,
+.mcp-btn-secondary {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.mcp-btn-primary.approve {
+    background: #10b981;
+    color: white;
+}
+
+.mcp-btn-primary.approve:hover:not(:disabled) {
+    background: #059669;
+}
+
+.mcp-btn-primary.reject {
+    background: #ef4444;
+    color: white;
+}
+
+.mcp-btn-primary.reject:hover:not(:disabled) {
+    background: #dc2626;
+}
+
+.mcp-btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.mcp-btn-secondary {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.mcp-btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Modal */
+@media (max-width: 640px) {
+    .mcp-modal {
+        width: 95%;
+        margin: 20px;
+    }
+
+    .mcp-modal-footer {
+        flex-direction: column;
+    }
+
+    .mcp-btn-primary,
+    .mcp-btn-secondary {
+        width: 100%;
+    }
+}
+
+/* Add to your existing CSS */
+
+/* Notification Messages */
+.mcp-success-notification {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 4px solid #10b981;
+  animation: slideIn 0.3s ease-out;
+}
+
+.mcp-error-notification {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 4px solid #ef4444;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Evidence Actions */
+.mcp-evidence-actions {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.mcp-evidence-action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.mcp-evidence-approve-btn,
+.mcp-evidence-reject-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mcp-evidence-approve-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.mcp-evidence-approve-btn:hover:not(:disabled) {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.2);
+}
+
+.mcp-evidence-reject-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.mcp-evidence-reject-btn:hover:not(:disabled) {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.2);
+}
+
+.mcp-evidence-approve-btn:disabled,
+.mcp-evidence-reject-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Evidence Comment Input */
+.mcp-evidence-comment-input {
+  margin-top: 12px;
+  padding: 16px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.mcp-evidence-comment-input textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.mcp-evidence-comment-input textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mcp-evidence-comment-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.mcp-evidence-comment-cancel,
+.mcp-evidence-comment-submit {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mcp-evidence-comment-cancel {
+  background-color: #e2e8f0;
+  color: #475569;
+}
+
+.mcp-evidence-comment-cancel:hover:not(:disabled) {
+  background-color: #cbd5e1;
+}
+
+.mcp-evidence-comment-submit {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.mcp-evidence-comment-submit:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.mcp-evidence-comment-cancel:disabled,
+.mcp-evidence-comment-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Update verification badges */
+.mcp-evidence-verified-badge,
+.mcp-evidence-pending-badge,
+.mcp-evidence-rejected-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.mcp-evidence-verified-badge {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.mcp-evidence-pending-badge {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.mcp-evidence-rejected-badge {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mcp-evidence-action-buttons {
+    flex-direction: column;
+  }
+  
+  .mcp-evidence-approve-btn,
+  .mcp-evidence-reject-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .mcp-evidence-comment-actions {
+    flex-direction: column;
+  }
+  
+  .mcp-evidence-comment-cancel,
+  .mcp-evidence-comment-submit {
+    width: 100%;
+  }
+}
+
+
+/* Add to your existing CSS */
+
+/* Verification Actions */
+.mcp-evidence-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.mcp-verify-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mcp-verify-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mcp-approve-btn {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.mcp-approve-btn:hover:not(:disabled) {
+  background: #a7f3d0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(5, 150, 105, 0.2);
+}
+
+.mcp-reject-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.mcp-reject-btn:hover:not(:disabled) {
+  background: #fecaca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(185, 28, 28, 0.2);
+}
+
+/* Modal Styles */
+.mcp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: mcpFadeIn 0.2s ease;
+}
+
+@keyframes mcpFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mcp-modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: mcpSlideUp 0.3s ease;
+}
+
+@keyframes mcpSlideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mcp-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mcp-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.mcp-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.mcp-modal-close:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.mcp-modal-body {
+  padding: 24px;
+}
+
+.mcp-modal-evidence-info {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.mcp-modal-evidence-info p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #334155;
+}
+
+.mcp-modal-evidence-info p:first-child {
+  margin-top: 0;
+}
+
+.mcp-modal-evidence-info p:last-child {
+  margin-bottom: 0;
+}
+
+.mcp-modal-field {
+  margin-bottom: 20px;
+}
+
+.mcp-modal-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.mcp-optional {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+.mcp-modal-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.2s;
+}
+
+.mcp-modal-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mcp-modal-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.mcp-modal-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #b91c1c;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.mcp-modal-success {
+  text-align: center;
+  padding: 20px;
+}
+
+.mcp-success-icon {
+  font-size: 48px;
+  color: #10b981;
+  margin-bottom: 12px;
+}
+
+.mcp-modal-success p {
+  color: #065f46;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.mcp-modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.mcp-modal-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mcp-modal-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mcp-modal-cancel {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.mcp-modal-cancel:hover:not(:disabled) {
+  background: #e2e8f0;
+}
+
+.mcp-modal-approve {
+  background: #10b981;
+  color: white;
+}
+
+.mcp-modal-approve:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+.mcp-modal-reject {
+  background: #ef4444;
+  color: white;
+}
+
+.mcp-modal-reject:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* Update evidence badges */
+.mcp-evidence-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.mcp-evidence-pending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.mcp-evidence-pending-badge svg {
+  animation: spin 1s linear infinite;
+}
+
+.mcp-evidence-rejected-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Responsive modal */
+@media (max-width: 576px) {
+  .mcp-modal {
+    width: 95%;
+    margin: 20px;
+  }
+
+  .mcp-modal-header {
+    padding: 16px 20px;
+  }
+
+  .mcp-modal-body {
+    padding: 20px;
+  }
+
+  .mcp-modal-actions {
+    flex-direction: column;
+  }
+
+  .mcp-evidence-actions {
+    flex-direction: column;
+  }
+}
+
+
+/* Add to your existing CSS */
+
+/* Verification Actions */
+.mcp-evidence-verification-actions {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.mcp-comment-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.mcp-comment-toggle-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.mcp-comment-toggle-btn svg {
+  font-size: 12px;
+}
+
+.mcp-verification-comment-box {
+  margin-bottom: 16px;
+}
+
+.mcp-comment-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.2s;
+  background: #f8fafc;
+}
+
+.mcp-comment-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: white;
+}
+
+.mcp-comment-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.mcp-verification-success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  border-radius: 6px;
+  color: #065f46;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.mcp-verification-success svg {
+  font-size: 16px;
+  color: #10b981;
+}
+
+.mcp-verification-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #b91c1c;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.mcp-verification-error svg {
+  font-size: 16px;
+  color: #ef4444;
+}
+
+.mcp-verification-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.mcp-verify-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mcp-verify-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mcp-approve-btn {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.mcp-approve-btn:hover:not(:disabled) {
+  background: #a7f3d0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(5, 150, 105, 0.2);
+}
+
+.mcp-reject-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.mcp-reject-btn:hover:not(:disabled) {
+  background: #fecaca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(185, 28, 28, 0.2);
+}
+
+/* Update evidence badges */
+.mcp-evidence-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.mcp-evidence-pending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.mcp-evidence-pending-badge svg {
+  animation: spin 1s linear infinite;
+}
+
+.mcp-evidence-rejected-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .mcp-verification-buttons {
+    flex-direction: column;
+  }
+  
+  .mcp-verify-btn {
+    width: 100%;
+  }
+}
+
+
+/* Add to your existing CSS */
+
+/* Verification Actions */
+.mcp-evidence-verification-actions {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.mcp-comment-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.mcp-comment-toggle-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.mcp-comment-toggle-btn svg {
+  font-size: 12px;
+}
+
+.mcp-verification-comment-box {
+  margin-bottom: 16px;
+}
+
+.mcp-comment-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.2s;
+  background: #f8fafc;
+}
+
+.mcp-comment-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: white;
+}
+
+.mcp-comment-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.mcp-verification-success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  border-radius: 6px;
+  color: #065f46;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.mcp-verification-success svg {
+  font-size: 16px;
+  color: #10b981;
+}
+
+.mcp-verification-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #b91c1c;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.mcp-verification-error svg {
+  font-size: 16px;
+  color: #ef4444;
+}
+
+.mcp-verification-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.mcp-verify-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mcp-verify-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mcp-approve-btn {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.mcp-approve-btn:hover:not(:disabled) {
+  background: #a7f3d0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(5, 150, 105, 0.2);
+}
+
+.mcp-reject-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.mcp-reject-btn:hover:not(:disabled) {
+  background: #fecaca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(185, 28, 28, 0.2);
+}
+
+/* Update evidence badges */
+.mcp-evidence-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.mcp-evidence-pending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.mcp-evidence-pending-badge svg {
+  animation: spin 1s linear infinite;
+}
+
+.mcp-evidence-rejected-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .mcp-verification-buttons {
+    flex-direction: column;
+  }
+  
+  .mcp-verify-btn {
+    width: 100%;
+  }
+}
+
+
+/* Assign Marks Button Styles */
+.mcp-header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.mcp-assign-marks-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mcp-assign-marks-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46a0 100%);
+}
+
+.mcp-assign-marks-btn:active {
+  transform: translateY(0);
+}
+
+/* No Scores Message Styles */
+.mcp-no-scores-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: #fef9e6;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px dashed #fbbf24;
+}
+
+.mcp-no-scores-icon {
+  font-size: 3rem;
+  color: #f59e0b;
+  margin-bottom: 1rem;
+}
+
+.mcp-no-scores-message p {
+  color: #92400e;
+  font-size: 0.95rem;
+  margin: 0;
+  max-width: 400px;
+}
+
+/* Update existing styles for consistency */
+.mcp-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .mcp-page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .mcp-header-actions {
+    justify-content: flex-start;
+  }
+  
+  .mcp-assign-marks-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* Digital Logbook Section Styles */
+.mcp-digital-logbook-section {
+  margin-bottom: 30px;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.mcp-logbook-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.mcp-logbook-entry-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.mcp-logbook-entry-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.mcp-logbook-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mcp-logbook-entry-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.mcp-logbook-entry-title svg {
+  color: #3b82f6;
+}
+
+.mcp-logbook-entry-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.mcp-logbook-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.mcp-logbook-detail-row svg {
+  color: #3b82f6;
+  font-size: 14px;
+}
+
+.mcp-logbook-detail-row strong {
+  color: #1e293b;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.mcp-logbook-review-info {
+  background: #eef2ff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin: 12px 0;
+  color: #1e40af;
+}
+
+.mcp-logbook-comments {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.mcp-logbook-comments strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #334155;
+}
+
+.mcp-logbook-comments p {
+  margin: 0;
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.mcp-logbook-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.mcp-logbook-view-btn,
+.mcp-logbook-approve-btn,
+.mcp-logbook-reject-btn,
+.mcp-logbook-assign-marks-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mcp-logbook-view-btn {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.mcp-logbook-view-btn:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+.mcp-logbook-approve-btn {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.mcp-logbook-approve-btn:hover {
+  background: #a7f3d0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(5, 150, 105, 0.2);
+}
+
+.mcp-logbook-reject-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.mcp-logbook-reject-btn:hover {
+  background: #fecaca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(185, 28, 28, 0.2);
+}
+
+.mcp-logbook-assign-marks-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.mcp-logbook-assign-marks-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Modal Styles for Logbook Details */
+.mcp-logbook-full-details {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.mcp-logbook-detail-group {
+  margin-bottom: 24px;
+}
+
+.mcp-logbook-detail-group h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.mcp-logbook-detail-group p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.mcp-logbook-detail-group p strong {
+  color: #1e293b;
+  font-weight: 600;
+  min-width: 120px;
+  display: inline-block;
+}
+
+.mcp-logbook-document {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.mcp-logbook-document svg {
+  color: #3b82f6;
+}
+
+.mcp-logbook-document span {
+  flex: 1;
+  font-size: 13px;
+  color: #334155;
+}
+
+.mcp-logbook-document a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.mcp-logbook-document a:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mcp-logbook-entry-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .mcp-logbook-actions {
+    flex-direction: column;
+  }
+  
+  .mcp-logbook-view-btn,
+  .mcp-logbook-approve-btn,
+  .mcp-logbook-reject-btn,
+  .mcp-logbook-assign-marks-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .mcp-logbook-detail-group p strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+}
+
+

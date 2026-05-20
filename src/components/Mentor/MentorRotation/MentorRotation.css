@@ -1,0 +1,104 @@
+.rt-page {
+  width: 100%;
+}
+
+/* Stat Cards */
+.rt-stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.rt-stat-card p {
+  margin: 0;
+  color: #6c757d;
+}
+
+/* Candidate Card */
+.rt-candidate-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Avatar */
+.rt-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #1e56b3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.rt-candidate-info {
+  display: flex;
+  align-items: center;
+}
+
+/* Completion Pill */
+.rt-complete-pill {
+  background: #eef2f6;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Progress */
+.rt-progress-section {
+  margin-top: 18px;
+}
+
+.rt-progress {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 10px;
+}
+
+.rt-progress .progress-bar {
+  background: #1e56b3;
+  border-radius: 10px;
+}
+
+/* Steps */
+.rt-steps {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.rt-step {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #f1f3f5;
+  font-size: 14px;
+}
+
+.rt-step-complete {
+  background: #d1f2eb;
+  color: #0f9d58;
+}
+
+.rt-step-active {
+  border: 1px solid #1e56b3;
+  color: #1e56b3;
+  background: #eef4ff;
+}
+
+/* Footer */
+.rt-footer {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  gap: 25px;
+  font-size: 13px;
+  color: #6c757d;
+}

@@ -1,0 +1,117 @@
+/* Layout */
+.la-layout-wrapper {
+  display: flex;
+}
+
+.la-main-wrapper {
+  flex: 1;
+}
+
+.la-content-area {
+  padding: 24px;
+}
+
+/* Section Title */
+.la-section-title {
+  font-weight: 600;
+  color: #6c757d;
+}
+
+/* Entry Cards */
+.la-entry-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  background: white;
+  transition: 0.3s;
+}
+
+.la-entry-card:hover {
+  border-color: #3b82f6;
+}
+
+.la-entry-active {
+  border: 2px solid #2563eb;
+}
+
+/* Entry Desc */
+.la-entry-desc {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Badge */
+.la-badge {
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Details Card */
+.la-details-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Status Pill */
+.la-status-pill {
+  background: #fde68a;
+  color: #92400e;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Info Box */
+.la-info-box {
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.la-info-box small {
+  color: #6b7280;
+}
+
+/* Description */
+.la-description-box {
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* File Pills */
+.la-file-pill {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+/* Comment Box */
+.la-comment-box {
+  border-radius: 10px;
+}
+
+/* Buttons */
+.la-btn-approve {
+  background: #059669;
+  color: white;
+}
+
+.la-btn-reject {
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+
+.la-logbook-page {
+  width: 100%;
+}

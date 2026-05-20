@@ -1,0 +1,527 @@
+/* Add these styles to existing CSS */
+
+/* Search Bar */
+.tc-search-wrapper {
+  margin-bottom: 20px;
+}
+
+.tc-search-box {
+  position: relative;
+  max-width: 400px;
+}
+
+.tc-search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.tc-search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Table Header Enhancements */
+.tc-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tc-table-header h5 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tc-total-count {
+  color: #6c757d;
+  font-size: 0.85rem;
+  background: #f8f9fa;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* Action Buttons */
+.tc-view-btn {
+  background: none;
+  border: 1px solid #667eea;
+  color: #667eea;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tc-view-btn:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* At Risk Badge */
+.tc-at-risk {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Modal Styles */
+.tc-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.tc-modal-container {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+}
+
+.tc-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.tc-modal-header h5 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.tc-modal-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.tc-modal-close:hover {
+  transform: scale(1.1);
+}
+
+.tc-modal-body {
+  padding: 24px;
+}
+
+.tc-detail-section {
+  margin-bottom: 24px;
+}
+
+.tc-detail-section h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+  border-left: 3px solid #667eea;
+  padding-left: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tc-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.tc-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tc-detail-item label {
+  font-weight: 600;
+  color: #666;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tc-detail-item span {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Document Card */
+.tc-document-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.tc-document-icon {
+  font-size: 2rem;
+  color: #667eea;
+}
+
+.tc-document-info {
+  flex: 1;
+}
+
+.tc-document-name {
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  word-break: break-all;
+}
+
+.tc-download-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tc-download-btn:hover {
+  background: #5a67d8;
+}
+
+.tc-modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-end;
+  background: #f8f9fa;
+  border-radius: 0 0 12px 12px;
+}
+
+.tc-close-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tc-close-btn:hover {
+  background: #5a6268;
+}
+
+.ml-2 {
+  margin-left: 8px;
+}
+
+.mt-3 {
+  margin-top: 16px;
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tc-main-wrapper {
+    margin-left: 0;
+  }
+  
+  .tc-content-area {
+    padding: 15px;
+  }
+  
+  .tc-stat-card {
+    padding: 12px;
+  }
+  
+  .tc-stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .tc-stat-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .tc-table thead th,
+  .tc-table tbody td {
+    padding: 12px 15px;
+  }
+  
+  .tc-modal-container {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .tc-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tc-detail-section h6 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Scrollbar Styling */
+.tc-modal-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tc-modal-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.tc-modal-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.tc-modal-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* Action buttons container */
+.tc-action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Accept button */
+.tc-accept-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #28a745;
+  background-color: transparent;
+  color: #28a745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.tc-accept-btn:hover {
+  background-color: #28a745;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Reject button */
+.tc-reject-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #dc3545;
+  background-color: transparent;
+  color: #dc3545;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.tc-reject-btn:hover {
+  background-color: #dc3545;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Update view button to work well with the new buttons */
+.tc-view-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #007bff;
+  background-color: transparent;
+  color: #007bff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tc-view-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.tc-view-btn svg {
+  font-size: 12px;
+}
+
+
+/* Action Buttons Container */
+.tc-action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* View Button */
+.tc-view-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  background-color: #fff;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.tc-view-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+  color: #495057;
+}
+
+/* Accept Button */
+.tc-accept-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #28a745;
+  background-color: #28a745;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.tc-accept-btn:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+}
+
+.tc-accept-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Reject Button */
+.tc-reject-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #dc3545;
+  background-color: #dc3545;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.tc-reject-btn:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
+}
+
+.tc-reject-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Update existing tc-view-btn if needed */
+.tc-view-btn {
+  width: auto;
+  padding: 0 12px;
+  gap: 6px;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .tc-action-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .tc-view-btn {
+    padding: 0 8px;
+  }
+}

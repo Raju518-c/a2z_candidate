@@ -1,0 +1,727 @@
+/* Layout */
+.ccert-layout-wrapper {
+  display: flex;
+}
+
+.ccert-main-wrapper {
+  flex: 1;
+  background: #f5f7fa;
+  min-height: 100vh;
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+.ccert-content-area {
+  padding: 25px;
+}
+
+/* Loading State */
+.ccert-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #6c757d;
+}
+
+.ccert-spinner {
+  font-size: 40px;
+  color: #3498db;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Page Header */
+.ccert-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.ccert-title {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.ccert-sub {
+  color: #6c757d;
+  margin: 0;
+}
+
+.ccert-header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Buttons */
+.ccert-btn-primary {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ccert-btn-primary:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+}
+
+.ccert-btn-outline {
+  border: 1px solid #dee2e6;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #2c3e50;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ccert-btn-outline:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+/* Stats Grid */
+.ccert-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.ccert-stat-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ccert-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.ccert-stat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.ccert-stat-icon.success {
+  background: linear-gradient(135deg, #d4edda 0%, #e8f5e9 100%);
+  color: #28a745;
+}
+
+.ccert-stat-icon.warning {
+  background: linear-gradient(135deg, #fff3cd 0%, #fff8e1 100%);
+  color: #ffc107;
+}
+
+.ccert-stat-icon.info {
+  background: linear-gradient(135deg, #d1ecf1 0%, #e0f7fa 100%);
+  color: #17a2b8;
+}
+
+.ccert-stat-content h4 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.ccert-stat-content p {
+  margin: 4px 0 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+/* Card */
+.ccert-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 24px;
+}
+
+.ccert-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.ccert-card-header h5 {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.ccert-count-badge {
+  background: #e9ecef;
+  color: #495057;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Empty State */
+.ccert-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.ccert-empty-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #adb5bd;
+}
+
+.ccert-empty-state h6 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+/* Certificates List */
+.ccert-certificates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Certificate Item */
+.ccert-certificate-item {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.ccert-certificate-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.ccert-certificate-item.valid {
+  border-left: 4px solid #28a745;
+}
+
+.ccert-certificate-item.pending {
+  border-left: 4px solid #ffc107;
+  background: #fffef5;
+}
+
+.ccert-certificate-item.rejected {
+  border-left: 4px solid #dc3545;
+  background: #fff5f5;
+}
+
+.ccert-certificate-item.expired {
+  border-left: 4px solid #6c757d;
+  opacity: 0.85;
+}
+
+.ccert-certificate-main {
+  display: flex;
+  gap: 16px;
+}
+
+.ccert-certificate-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.ccert-certificate-item.valid .ccert-certificate-icon {
+  color: #28a745;
+}
+
+.ccert-certificate-item.pending .ccert-certificate-icon {
+  color: #ffc107;
+}
+
+.ccert-certificate-item.rejected .ccert-certificate-icon {
+  color: #dc3545;
+}
+
+.ccert-certificate-info {
+  flex: 1;
+}
+
+.ccert-certificate-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.ccert-certificate-header h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.ccert-status-tag {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ccert-status-tag.approved {
+  background: #d4edda;
+  color: #155724;
+}
+
+.ccert-status-tag.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.ccert-status-tag.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.ccert-organization {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.ccert-certificate-meta {
+  margin-bottom: 16px;
+}
+
+.ccert-meta-tag {
+  background: #f1f3f5;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #495057;
+}
+
+.ccert-dates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ccert-date-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.ccert-date-label {
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 4px;
+}
+
+.ccert-date-value {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.ccert-remaining {
+  font-weight: 600;
+}
+
+.ccert-remaining.valid {
+  color: #28a745;
+}
+
+.ccert-remaining.expired {
+  color: #dc3545;
+}
+
+/* Action Menu */
+.ccert-certificate-actions {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.ccert-action-menu-container {
+  position: relative;
+}
+
+.ccert-menu-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  background: white;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ccert-menu-toggle:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+  color: #2c3e50;
+}
+
+.ccert-action-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  min-width: 160px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.ccert-menu-item {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2c3e50;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-align: left;
+}
+
+.ccert-menu-item:hover {
+  background: #f8f9fa;
+}
+
+.ccert-menu-item:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ccert-menu-item svg {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.ccert-menu-item:hover svg {
+  color: #3498db;
+}
+
+/* Progress Bar */
+.ccert-certificate-progress {
+  margin-top: 16px;
+  height: 6px;
+  background: #e9ecef;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ccert-progress-bar {
+  height: 100%;
+  border-radius: 20px;
+  width: 85%;
+}
+
+.ccert-progress-bar.valid {
+  background: linear-gradient(90deg, #28a745 0%, #34ce57 100%);
+}
+
+.ccert-progress-bar.pending {
+  background: linear-gradient(90deg, #ffc107 0%, #ffdb58 100%);
+}
+
+.ccert-progress-bar.rejected {
+  background: linear-gradient(90deg, #dc3545 0%, #e4606d 100%);
+}
+
+/* Recommended Grid */
+.ccert-recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ccert-recommend-item {
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fafbfc;
+  transition: all 0.2s ease;
+}
+
+.ccert-recommend-item:hover {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.ccert-recommend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.ccert-recommend-header h6 {
+  font-weight: 600;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.ccert-relevance-badge {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.ccert-relevance-badge.high {
+  background: #2c3e50;
+  color: white;
+}
+
+.ccert-relevance-badge.medium {
+  background: #17a2b8;
+  color: white;
+}
+
+.ccert-exam-date {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.ccert-learn-more-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  background: white;
+  border-radius: 8px;
+  color: #2c3e50;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ccert-learn-more-btn:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .ccert-main-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .ccert-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ccert-recommended-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ccert-page-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .ccert-header-actions {
+    width: 100%;
+  }
+  
+  .ccert-header-actions .ccert-btn-outline,
+  .ccert-header-actions .ccert-btn-primary {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .ccert-content-area {
+    padding: 16px;
+  }
+  
+  .ccert-dates-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .ccert-certificate-main {
+    flex-wrap: wrap;
+  }
+  
+  .ccert-certificate-actions {
+    width: 100%;
+  }
+  
+  .ccert-action-menu-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* Action Buttons - Small Icons */
+.ccert-certificate-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.ccert-action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.ccert-edit-btn {
+  background: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #bbdefb;
+}
+
+.ccert-edit-btn:hover {
+  background: #1976d2;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2);
+}
+
+.ccert-delete-btn {
+  background: #ffebee;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+}
+
+.ccert-delete-btn:hover {
+  background: #d32f2f;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(211, 47, 47, 0.2);
+}
+
+.ccert-delete-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.ccert-download-btn {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.ccert-download-btn:hover {
+  background: #2e7d32;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(46, 125, 50, 0.2);
+}
+
+.ccert-download-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.ccert-verify-btn {
+  background: #f3e5f5;
+  color: #7b1fa2;
+  border: 1px solid #e1bee7;
+}
+
+.ccert-verify-btn:hover {
+  background: #7b1fa2;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(123, 31, 162, 0.2);
+}
+
+/* Responsive adjustments for action buttons */
+@media (max-width: 768px) {
+  .ccert-certificate-actions {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  .ccert-action-btn {
+    flex: 1;
+    max-width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ccert-certificate-actions {
+    flex-wrap: wrap;
+  }
+  
+  .ccert-action-btn {
+    flex: 1;
+    min-width: 40px;
+  }
+}
+
+/* Relevance badge text update */
+.ccert-relevance-badge {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: 500;
+}

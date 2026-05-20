@@ -1,0 +1,241 @@
+/* Users.css */
+
+.users-wrapper {
+  padding: 20px;
+}
+
+/* Header Styles */
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.users-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.users-header p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.users-add-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #667eea;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.users-add-btn:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Filters Box */
+.users-filters-box {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  border: 1px solid #eef2f6;
+}
+
+.users-filters {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.users-search {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.users-search svg {
+  color: #94a3b8;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.users-search input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.users-search input::placeholder {
+  color: #94a3b8;
+}
+
+.users-filter-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #667eea;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.users-filter-btn:hover {
+  background: #5a67d8;
+}
+
+/* Loading and Error States */
+.users-loading,
+.users-error {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #eef2f6;
+}
+
+.users-loading p {
+  color: #667eea;
+  font-size: 16px;
+}
+
+.users-error p {
+  color: #e53e3e;
+  margin-bottom: 16px;
+}
+
+/* Table Styles */
+.users-table-wrapper {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #eef2f6;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table thead th {
+  background: #f8fafc;
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.users-table tbody td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #eef2f6;
+  color: #333;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.users-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Username with icon */
+.users-username-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.users-username-icon {
+  color: #667eea;
+  font-size: 14px;
+}
+
+/* Date fields */
+.users-date {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Action Icons */
+.action-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.users-action-icon {
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.users-action-icon:hover {
+  transform: scale(1.1);
+}
+
+.edit-icon {
+  color: #667eea;
+}
+
+.delete-icon {
+  color: #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .users-table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .users-table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .users-filters {
+    flex-direction: column;
+  }
+  
+  .users-search {
+    width: 100%;
+  }
+  
+  .users-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
+
+/* Empty State */
+.text-center {
+  text-align: center;
+  padding: 40px 20px;
+  color: #94a3b8;
+  font-size: 14px;
+}

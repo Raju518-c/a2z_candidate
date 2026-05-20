@@ -1,0 +1,572 @@
+/* CompetenceForm.css */
+
+.competence-form-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.competence-loading-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.competence-loading-text {
+  margin-top: 12px;
+  color: #6c757d;
+}
+
+.competence-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.competence-form-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 4px 0;
+}
+
+.competence-form-subtitle {
+  color: #6c757d;
+  margin: 0;
+  font-size: 14px;
+}
+
+.competence-cancel-btn {
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.competence-cancel-btn:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #cbd5e0;
+}
+
+.competence-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.competence-form-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+.competence-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.competence-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.competence-form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 6px;
+}
+
+.competence-required-star {
+  color: #dc3545;
+  margin-left: 2px;
+}
+
+.competence-form-input,
+.competence-form-select {
+  padding: 10px 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.competence-form-input:focus,
+.competence-form-select:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.competence-form-input:read-only,
+.competence-form-select:read-only {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+.competence-form-input.competence-input-error,
+.competence-form-select.competence-input-error {
+  border-color: #dc3545;
+}
+
+.competence-form-input.competence-input-error:focus,
+.competence-form-select.competence-input-error:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.competence-error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.competence-field-hint {
+  color: #6c757d;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.competence-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e9ecef;
+}
+
+.competence-primary-btn,
+.competence-secondary-btn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.competence-primary-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.competence-primary-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.competence-primary-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.competence-secondary-btn {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  color: #6c757d;
+}
+
+.competence-secondary-btn:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #cbd5e0;
+}
+
+.competence-secondary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.competence-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: competence-spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes competence-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+  .competence-form-wrapper {
+    padding: 16px;
+  }
+
+  .competence-form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .competence-cancel-btn {
+    align-self: flex-start;
+  }
+
+  .competence-form-actions {
+    flex-direction: column;
+  }
+
+  .competence-primary-btn,
+  .competence-secondary-btn {
+    width: 100%;
+  }
+}
+
+
+/* Add these styles to your AddCandidateCompetency.css */
+
+.competence-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+  margin-bottom: 16px;
+}
+
+.competence-form-group {
+  padding: 0 12px;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.competence-full-width {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.competence-half-width {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .competence-half-width {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .competence-form-row {
+    margin: 0;
+  }
+  
+  .competence-form-group {
+    padding: 0;
+  }
+}
+
+/* Keep your existing styles below */
+.competence-form-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.competence-loading-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.competence-loading-text {
+  margin-top: 12px;
+  color: #6c757d;
+}
+
+.competence-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.competence-form-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 4px 0;
+}
+
+.competence-form-subtitle {
+  color: #6c757d;
+  margin: 0;
+  font-size: 14px;
+}
+
+.competence-cancel-btn {
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.competence-cancel-btn:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #cbd5e0;
+}
+
+.competence-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.competence-form-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+.competence-form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.competence-required-star {
+  color: #dc3545;
+  margin-left: 2px;
+}
+
+.competence-form-input,
+.competence-form-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.competence-form-input:focus,
+.competence-form-select:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.competence-form-input:read-only,
+.competence-form-select:read-only {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+.competence-form-input.competence-input-error,
+.competence-form-select.competence-input-error {
+  border-color: #dc3545;
+}
+
+.competence-form-input.competence-input-error:focus,
+.competence-form-select.competence-input-error:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.competence-error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.competence-field-hint {
+  color: #6c757d;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.competence-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e9ecef;
+}
+
+.competence-primary-btn,
+.competence-secondary-btn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.competence-primary-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.competence-primary-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.competence-primary-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.competence-secondary-btn {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  color: #6c757d;
+}
+
+.competence-secondary-btn:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #cbd5e0;
+}
+
+.competence-secondary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.competence-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: competence-spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes competence-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+  .competence-form-wrapper {
+    padding: 16px;
+  }
+
+  .competence-form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .competence-cancel-btn {
+    align-self: flex-start;
+  }
+
+  .competence-form-actions {
+    flex-direction: column;
+  }
+
+  .competence-primary-btn,
+  .competence-secondary-btn {
+    width: 100%;
+  }
+}
+
+
+/* Update these styles in your AddCandidateCompetency.css */
+
+/* Back Button */
+.competence-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 8px 0;
+  background: none;
+  border: none;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.competence-back-btn:hover {
+  color: #007bff;
+}
+
+.competence-back-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Header Styles */
+.competence-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.competence-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.competence-header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.competence-form-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.competence-form-subtitle {
+  color: #6c757d;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+  .competence-header-left {
+    gap: 4px;
+  }
+  
+  .competence-back-btn {
+    padding: 8px 12px 8px 0;
+  }
+  
+  .competence-form-title {
+    font-size: 20px;
+  }
+  
+  .competence-form-subtitle {
+    font-size: 12px;
+  }
+}

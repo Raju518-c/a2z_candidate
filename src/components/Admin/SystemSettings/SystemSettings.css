@@ -1,0 +1,78 @@
+/* Layout */
+
+.ss-layout-wrapper {
+  display: flex;
+}
+
+.ss-main-wrapper {
+  flex: 1;
+  margin-left: 250px;
+}
+
+.ss-content-area {
+  padding: 20px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* Header */
+
+.ss-page-header h4 {
+  margin-bottom: 4px;
+}
+
+.ss-save-btn {
+  background: #3569b8;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+/* Cards */
+
+.ss-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  height: 100%;
+}
+
+.ss-card-header h5 {
+  margin-bottom: 2px;
+}
+
+.ss-card-header p {
+  font-size: 13px;
+  color: #6c757d;
+  margin-bottom: 18px;
+}
+
+/* Inputs */
+
+.ss-input {
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+/* Toggle Rows */
+
+.ss-toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #eaecef;
+}
+
+.ss-toggle-row:last-child {
+  border-bottom: none;
+}
+
+/* Bootstrap Switch Custom */
+
+.form-check-input {
+  width: 48px;
+  height: 24px;
+  cursor: pointer;
+}

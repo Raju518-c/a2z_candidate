@@ -1,0 +1,132 @@
+/* Layout */
+.tf-layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f8fb;
+}
+
+.tf-main-wrapper {
+  flex: 1;
+  margin-left: 260px;
+}
+
+.tf-content-area {
+  padding: 25px;
+}
+
+/* Header */
+.tf-page-header p {
+  color: #6c757d;
+}
+
+/* Card */
+.tf-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e9ecef;
+}
+
+.tf-card-title {
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.tf-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* Inputs */
+.tf-input {
+  height: 44px;
+}
+
+.tf-textarea {
+  resize: none;
+}
+
+/* Submit Button */
+.tf-submit-btn {
+  background: #1e56b3;
+  color: white;
+  height: 45px;
+  font-weight: 500;
+}
+
+.tf-submit-btn:hover {
+  background: #184a9b;
+}
+
+/* Filter */
+.tf-filter {
+  width: 160px;
+}
+
+/* History */
+.tf-history-item {
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 15px;
+}
+
+.tf-history-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tf-history-user {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.tf-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #1e56b3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.tf-history-text {
+  margin-top: 10px;
+  color: #495057;
+}
+
+.tf-history-mentor {
+  display: block;
+  margin-top: 8px;
+  color: #6c757d;
+}
+
+/* Badges */
+.tf-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tf-badge-blue {
+  background: #e7f1ff;
+  color: #0d6efd;
+}
+
+.tf-badge-yellow {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.tf-badge-green {
+  background: #e6f4ea;
+  color: #1e7e34;
+}

@@ -1,0 +1,391 @@
+.ccd-layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Assuming your sidebar has a fixed width of 250px */
+.ccd-main-content {
+  flex: 1;
+  margin-left: 250px; /* Match this with your sidebar width */
+  width: calc(100% - 250px);
+}
+
+.ccd-content-wrapper {
+  padding: 20px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.ccd-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.ccd-title {
+  font-weight: 600;
+  color: #2d4263;
+}
+
+.ccd-subtitle {
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+.ccd-muted {
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+/* Score Circle */
+.ccd-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 8px solid #2fa36b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #2fa36b;
+}
+
+/* Icons */
+.ccd-icon-success {
+  font-size: 28px;
+  color: #2fa36b;
+  margin-bottom: 10px;
+}
+
+.ccd-icon-warning {
+  font-size: 28px;
+  color: #f59e0b;
+  margin-bottom: 10px;
+}
+
+/* Badges */
+.ccd-badge-success {
+  background: #e9f7ef;
+  color: #2fa36b;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ccd-badge-warning {
+  background: #fff4e5;
+  color: #f59e0b;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Requirement */
+.ccd-req {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 12px;
+  border-left: 4px solid transparent;
+}
+
+.ccd-req.success {
+  background: #e9f7ef;
+  border-left-color: #2fa36b;
+}
+
+.ccd-req.warning {
+  background: #fff4e5;
+  border-left-color: #f59e0b;
+}
+
+.ccd-small-badge {
+  margin-left: 10px;
+  background: #eef2f7;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.ccd-expiry {
+  color: #f59e0b;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* PPE */
+.ccd-ppe {
+  background: #e9f7ef;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ccd-ppe.warning {
+  background: #fff4e5;
+}
+
+/* Progress */
+.ccd-progress {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.ccd-progress-fill {
+  height: 100%;
+  width: 87.5%; /* 7/8 = 87.5% */
+  background: #2fa36b;
+  border-radius: 20px;
+}
+
+/* Buttons */
+.ccd-action-btn {
+  width: 100%;
+  border: none;
+  background: #eef2f7;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: 0.3s;
+  color: #2d4263;
+  font-weight: 500;
+}
+
+.ccd-action-btn:hover {
+  background: #e2e8f0;
+  color: #1e3a8a;
+}
+
+.ccd-review-btn {
+  background: #2d4263;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+}
+
+.ccd-review-btn:hover {
+  background: #1e3a8a;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ccd-main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .ccd-circle {
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+    border-width: 6px;
+  }
+  
+  .ccd-req {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ccd-req .text-end {
+    text-align: left !important;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+/* Add this to your existing CandidateCompliance.css */
+.ccd-add-btn {
+  background: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.ccd-add-btn:hover {
+  background: #2980b9;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.ccd-add-btn:active {
+  transform: translateY(0);
+}
+
+/* Style for edit buttons in requirements */
+.ccd-req .btn-link {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.ccd-req .btn-link:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+
+/* Requirement Container Updates */
+.ccd-req {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 12px;
+  border-left: 4px solid transparent;
+  gap: 15px;
+}
+
+.ccd-req-content {
+  flex: 1;
+}
+
+.ccd-req-main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.ccd-req-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.ccd-req-dates {
+  text-align: right;
+}
+
+.ccd-req-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Edit Button */
+.ccd-edit-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #3498db;
+  background-color: #3498db;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  padding: 0;
+}
+
+.ccd-edit-btn:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
+}
+
+.ccd-edit-btn:active {
+  transform: translateY(0);
+}
+
+/* Delete Button */
+.ccd-delete-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #dc3545;
+  background-color: #dc3545;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  padding: 0;
+}
+
+.ccd-delete-btn:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
+}
+
+.ccd-delete-btn:active {
+  transform: translateY(0);
+}
+
+.ccd-delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Remove old button styles and update */
+.ccd-req .btn-link {
+  display: none; /* Hide old edit button style */
+}
+
+/* Responsive adjustments for requirements */
+@media (max-width: 768px) {
+  .ccd-req {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ccd-req-actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .ccd-req-dates {
+    text-align: left;
+  }
+  
+  .ccd-req-buttons {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .ccd-req-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ccd-req-buttons {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,406 @@
+/* ================= ROOT ================= */
+.cpi-wrapper {
+  background: #f8fafc;
+  padding: 8px 8px 32px;
+}
+
+/* ================= HEADER ================= */
+.cpi-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.cpi-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+.cpi-actions .cpi-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
+/* ================= IDENTITY CARD ================= */
+.cpi-id-card {
+  height: 100%;
+  border-radius: 18px;
+  padding: 22px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #1e3a5f 0%, #2b6b78 100%);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+}
+
+.cpi-id-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.cpi-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* ================= PROFILE ================= */
+.cpi-profile {
+  text-align: center;
+  margin: 26px 0;
+}
+
+.cpi-avatar {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 auto 12px;
+}
+
+.cpi-profile h4 {
+  margin-bottom: 2px;
+  font-size: 20px;
+}
+
+.cpi-profile p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.cpi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(34, 197, 94, 0.2);
+  color: #86efac;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* ================= INFO BLOCKS ================= */
+.cpi-id-box,
+.cpi-meta,
+.cpi-discipline {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+}
+
+.cpi-id-box {
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.cpi-id-box span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.cpi-id-box strong {
+  display: block;
+  margin-top: 2px;
+  font-size: 15px;
+}
+
+.cpi-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cpi-meta {
+  padding: 12px;
+}
+
+.cpi-meta span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.cpi-meta strong {
+  display: block;
+  margin-top: 2px;
+}
+
+/* ================= DISCIPLINE ================= */
+.cpi-discipline {
+  padding: 14px;
+  margin-bottom: 18px;
+}
+
+.cpi-discipline span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ================= FOOTER ================= */
+.cpi-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* ================= STATUS CARD ================= */
+.cpi-status-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  height: 100%;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.cpi-muted {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ================= STATUS ROW ================= */
+.cpi-status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: #f8fafc;
+  margin-bottom: 14px;
+}
+
+.cpi-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.cpi-icon.verified {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+.cpi-icon.expiring {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.cpi-pill {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.cpi-pill.verified {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+.cpi-pill.expiring {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+/* ================= ASSET EXPOSURE ================= */
+.cpi-ae-wrapper {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.cpi-ae-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cpi-ae-subtitle {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ================= EXPOSURE CARD ================= */
+.cpi-ae-card {
+  height: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px;
+  background: #ffffff;
+  transition: all 0.25s ease;
+}
+
+.cpi-ae-card:hover {
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  transform: translateY(-3px);
+}
+
+.cpi-ae-type {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.cpi-ae-card h4 {
+  margin: 8px 0;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.cpi-ae-card p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ================= TOTAL ================= */
+.cpi-ae-total {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* ================= GENERIC CARD ================= */
+.cpi-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  height: 100%;
+}
+
+.cpi-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ================= COMPETENCIES ================= */
+.cpi-competency {
+  margin-bottom: 18px;
+}
+
+.cpi-competency span {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.cpi-progress {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.cpi-progress-fill {
+  height: 100%;
+  background: #1e293b;
+  border-radius: 999px;
+}
+
+/* ================= TIMELINE ================= */
+.cpi-timeline-item {
+  display: flex;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 22px;
+}
+
+.cpi-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 18px;
+  width: 2px;
+  height: 100%;
+  background: #e5e7eb;
+}
+
+.cpi-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-top: 4px;
+  z-index: 1;
+}
+
+.cpi-dot.start {
+  background: #1e3a8a;
+}
+
+.cpi-dot.rotation {
+  background: #0d9488;
+}
+
+.cpi-dot.promotion {
+  background: #d97706;
+}
+
+.cpi-timeline-content {
+  padding-bottom: 4px;
+}
+
+.cpi-timeline-date {
+  font-size: 13px;
+  color: #64748b;
+  display: block;
+}
+
+
+/* Add this to your CandidateProfessionality.css file */
+
+.cpi-contact-info {
+  margin: 15px 0;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cpi-contact-item {
+  margin-bottom: 10px;
+}
+
+.cpi-contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.cpi-contact-item span {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-bottom: 3px;
+}
+
+.cpi-contact-item strong {
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cpi-contact-item strong {
+    font-size: 0.75rem;
+  }
+}

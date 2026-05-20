@@ -1,0 +1,325 @@
+/* Update in LevelManagement.css */
+
+.lm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 0 24px;
+}
+
+.lm-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.lm-header p {
+    margin: 4px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.lm-add-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.lm-add-btn:hover {
+    background-color: #0b5ed7;
+}
+
+.lm-add-btn svg {
+    font-size: 14px;
+}
+
+.lm-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lm-edit-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.lm-edit-btn:hover {
+    background-color: #f0f0f0;
+    color: #0d6efd;
+}
+
+.lm-edit-btn svg {
+    font-size: 18px;
+}
+
+/* Rest of your existing CSS remains the same */
+.lm-wrapper {
+    padding: 24px;
+}
+
+.lm-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.lm-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.lm-title-wrap {
+    display: flex;
+    gap: 12px;
+}
+
+.lm-level-badge {
+    width: 40px;
+    height: 40px;
+    background-color: #e7f1ff;
+    color: #0d6efd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.lm-title-wrap h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.lm-title-wrap p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.lm-candidate-pill {
+    background-color: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #555;
+}
+
+.lm-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.lm-exposure {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+.lm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+
+.lm-list li {
+    padding: 4px 0;
+    position: relative;
+    padding-left: 16px;
+}
+
+.lm-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+}
+
+.lm-list.blue li:before {
+    color: #0d6efd;
+}
+
+.lm-list.green li:before {
+    color: #28a745;
+}
+
+.lm-list.orange li:before {
+    color: #fd7e14;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .lm-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .lm-add-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .lm-card-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .lm-card-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+/* Add these new styles to your existing LevelManagement.css */
+
+.lm-stat-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.lm-stat-card p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.lm-stat-card h3 {
+    margin: 8px 0 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+.lm-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lm-action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.lm-edit-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.lm-edit-btn:hover:not(:disabled) {
+    background-color: #f0f0f0;
+    color: #0d6efd;
+}
+
+.lm-delete-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.lm-delete-btn:hover:not(:disabled) {
+    background-color: rgba(220, 53, 69, 0.1);
+    transform: scale(1.1);
+}
+
+.lm-edit-btn:disabled,
+.lm-delete-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.lm-status-badge {
+    background-color: #28a745;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.lm-code {
+    color: #0d6efd;
+    font-weight: 500;
+}
+
+.lm-footer {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+}
+
+.lm-card-placeholder {
+    border-left: 4px solid #ffc107;
+}
+
+/* Responsive updates */
+@media (max-width: 768px) {
+    .lm-card-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .lm-card-actions {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .lm-action-buttons {
+        margin-left: auto;
+    }
+
+    .lm-stat-card {
+        margin-bottom: 12px;
+    }
+}

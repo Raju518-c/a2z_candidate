@@ -1,0 +1,451 @@
+/* AdminAddCompetency.css - Fixed Width Version */
+
+/* Fix the main layout wrapper to prevent overflow */
+.al-layout-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.al-main-wrapper {
+  flex: 1;
+  min-width: 0; /* Prevents flex item from overflowing */
+  width: calc(100% - 250px); /* Adjust based on sidebar width */
+  margin-left: 250px; /* Match sidebar width */
+  transition: margin-left 0.3s ease;
+}
+
+.al-content-area {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Form wrapper - remove fixed max-width and use full width */
+.aac-form-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  min-height: calc(100vh - 70px);
+  box-sizing: border-box;
+}
+
+.aac-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aac-spinner-large {
+  font-size: 48px;
+  color: #667eea;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.aac-spinner {
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Form Header - make it responsive */
+.aac-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aac-form-title {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 6px 0;
+}
+
+.aac-form-subtitle {
+  color: #64748b;
+  margin: 0;
+  font-size: 14px;
+}
+
+.aac-cancel-btn {
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.aac-cancel-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.aac-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form Container - use full width */
+.aac-form-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aac-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+}
+
+/* Form Rows - fix gap and margin issues */
+.aac-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.aac-form-group {
+  flex: 1;
+  min-width: 0; /* Prevents overflow */
+  box-sizing: border-box;
+}
+
+.aac-full-width {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.aac-half-width {
+  flex: 1 1 calc(50% - 10px);
+  min-width: 250px; /* Minimum width before wrapping */
+}
+
+/* Form Labels and Inputs - ensure full width */
+.aac-form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.aac-required-star {
+  color: #ef4444;
+  margin-left: 4px;
+  font-size: 16px;
+}
+
+.aac-form-input,
+.aac-form-select,
+.aac-form-textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s;
+  background: white;
+  box-sizing: border-box;
+}
+
+.aac-form-input:hover,
+.aac-form-select:hover,
+.aac-form-textarea:hover {
+  border-color: #cbd5e0;
+}
+
+.aac-form-input:focus,
+.aac-form-select:focus,
+.aac-form-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.aac-form-input:read-only {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  cursor: not-allowed;
+  border-color: #cbd5e0;
+}
+
+.aac-form-input.aac-input-error,
+.aac-form-select.aac-input-error {
+  border-color: #ef4444;
+}
+
+.aac-form-input.aac-input-error:focus,
+.aac-form-select.aac-input-error:focus {
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.aac-form-textarea {
+  resize: vertical;
+  min-height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aac-error-message {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.aac-field-hint {
+  color: #667eea;
+  font-size: 12px;
+  margin-top: 6px;
+  display: block;
+  font-weight: 500;
+}
+
+/* Section Divider */
+.aac-section-divider {
+  margin: 16px 0 8px;
+  width: 100%;
+}
+
+.aac-section-heading {
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #e2e8f0;
+}
+
+/* Scores Grid - better responsive behavior */
+.aac-scores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 18px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aac-scores-grid .aac-form-group {
+  padding: 0;
+  min-width: 0;
+}
+
+/* Form Actions */
+.aac-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 2px solid #e2e8f0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aac-primary-btn,
+.aac-secondary-btn {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.aac-primary-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.aac-primary-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.aac-primary-btn:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.aac-secondary-btn {
+  background: white;
+  border: 2px solid #e2e8f0;
+  color: #64748b;
+}
+
+.aac-secondary-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.aac-secondary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .aac-scores-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .al-main-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .al-content-area {
+    padding: 12px;
+  }
+
+  .aac-form-wrapper {
+    padding: 12px;
+  }
+
+  .aac-form-container {
+    padding: 20px;
+  }
+
+  .aac-form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .aac-cancel-btn {
+    width: 100%;
+  }
+
+  .aac-form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .aac-half-width {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .aac-scores-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .aac-form-actions {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  .aac-primary-btn,
+  .aac-secondary-btn {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aac-form-container {
+    padding: 16px;
+  }
+
+  .aac-form-title {
+    font-size: 20px;
+  }
+
+  .aac-form-subtitle {
+    font-size: 13px;
+  }
+
+  .aac-section-heading {
+    font-size: 16px;
+  }
+
+  .aac-scores-grid {
+    padding: 12px;
+    gap: 12px;
+  }
+}
+
+/* Fix for sidebar toggle (if applicable) */
+.al-layout-wrapper.sidebar-collapsed .al-main-wrapper {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+}
+
+/* Ensure all elements use border-box sizing */
+* {
+  box-sizing: border-box;
+}
+
+.al-layout-wrapper *,
+.al-main-wrapper *,
+.al-content-area *,
+.aac-form-wrapper *,
+.aac-form-container * {
+  box-sizing: border-box;
+}

@@ -1,0 +1,132 @@
+.rp-wrapper {
+  background: #f7f9fc;
+  padding: 24px;
+}
+
+/* Header */
+.rp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.rp-header h2 {
+  font-weight: 700;
+}
+
+.rp-header p {
+  color: #6b7280;
+}
+
+.rp-add-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+/* Stats */
+.rp-stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+.rp-stat-card p {
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.rp-stat-card h3 {
+  font-weight: 700;
+}
+
+/* Table Card */
+.rp-table-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+}
+
+.rp-table thead {
+  background: #f9fafb;
+}
+
+.rp-table th {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.rp-name {
+  font-weight: 600;
+}
+
+/* Rotation Path */
+.rp-path {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.rp-pill {
+  background: #eef2ff;
+  color: #2563eb;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* Progress */
+.rp-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rp-progress-bar {
+  width: 90px;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.rp-progress-bar div {
+  height: 100%;
+  background: #2563eb;
+}
+
+/* Status */
+.rp-status {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.rp-status.active {
+  background: #e7f8ee;
+  color: #16a34a;
+}
+
+.rp-status.completed {
+  background: #e0edff;
+  color: #2563eb;
+}
+
+.rp-status.upcoming {
+  background: #fff7ed;
+  color: #f59e0b;
+}
+
+/* Actions */
+.rp-action {
+  cursor: pointer;
+  color: #6b7280;
+}

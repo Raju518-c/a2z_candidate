@@ -1,0 +1,75 @@
+.ta-reports-page {
+  padding: 10px;
+}
+
+/* Export Button */
+.ta-reports-export-btn {
+  background: #1e5bb8;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 18px;
+}
+
+/* Filter */
+.ta-reports-filter {
+  width: 180px;
+}
+
+/* Report Card */
+.ta-reports-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  height: 100%;
+}
+
+/* Icon */
+.ta-reports-icon {
+  font-size: 24px;
+  background: #eef3fb;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+/* Badge */
+.ta-reports-badge {
+  background: #eef3fb;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Buttons */
+.ta-reports-preview {
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.ta-reports-download {
+  background: #1e5bb8;
+  color: white;
+}
+
+/* Downloads Section */
+.ta-reports-download-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 15px;
+}
+
+.ta-reports-download-icon {
+  border: none;
+  background: none;
+  font-size: 18px;
+}

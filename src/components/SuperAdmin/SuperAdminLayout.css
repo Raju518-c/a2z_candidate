@@ -1,0 +1,352 @@
+/* ============================= */
+/* GLOBAL CLEANUP */
+/* ============================= */
+
+.sa-layout-wrapper {
+  font-family: "Inter", sans-serif;
+}
+
+/* Remove unwanted Bootstrap interference */
+.sa-main-content .table th,
+.sa-main-content .table td {
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+/* ============================= */
+/* SIDEBAR FIX */
+/* ============================= */
+
+/* FORCE SAME AS ADMIN */
+.ta-sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #1f2937;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 18px;
+}
+
+
+/* Better spacing */
+.ta-sidebar-scroll {
+  padding: 10px 0;
+}
+
+
+.ta-header {
+  height: 60px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* match admin */
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Menu titles */
+.ta-menu-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #9ca3af;
+  padding: 12px 20px 6px;
+  letter-spacing: 0.6px;
+}
+
+
+.ta-main-wrapper {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+}
+
+/* Menu items */
+.ta-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #e5e7eb;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+
+/* Icons */
+.ta-menu-item svg {
+  font-size: 16px;
+  min-width: 16px;
+}
+
+/* Hover */
+.ta-menu-item:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+/* Active */
+.ta-menu-item.active {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Badge spacing fix */
+.sa-badge {
+  margin-left: auto;
+  font-size: 9px;
+  padding: 3px 6px;
+}
+
+/* Footer */
+.ta-sidebar-footer {
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ============================= */
+/* HEADER FIX */
+/* ============================= */
+
+.sa-main-header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Search box */
+.sa-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.sa-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  width: 220px;
+}
+
+/* Quick actions button */
+.sa-action-btn {
+  background: #f9fafb;
+  font-size: 13px;
+}
+
+/* ============================= */
+/* DASHBOARD FIX */
+/* ============================= */
+
+/* Welcome Section */
+.sa-welcome-section {
+  background: white;
+  padding: 20px 24px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.sa-welcome-section h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.sa-welcome-section p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Quick stats */
+.sa-quick-stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.sa-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.sa-stat-label {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.sa-stat-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ============================= */
+/* WIDGET FIX */
+/* ============================= */
+
+.sa-widget {
+  border: 1px solid #f1f5f9;
+}
+
+.sa-widget-icon {
+  font-size: 22px;
+}
+
+/* ============================= */
+/* TABLE FIX */
+/* ============================= */
+
+.sa-table-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sa-table-card thead {
+  background: #f9fafb;
+}
+
+.sa-table-card th {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  padding: 12px;
+  text-align: left;
+}
+
+.sa-table-card td {
+  padding: 12px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.sa-table-card tbody tr {
+  border-top: 1px solid #f1f5f9;
+}
+
+.sa-table-card tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* ============================= */
+/* FIX HEADER + SIDEBAR GAP */
+/* ============================= */
+
+.sa-main-wrapper {
+  overflow: hidden;
+}
+
+.sa-content-area {
+  overflow: hidden;
+}
+
+.sa-main-content {
+  overflow-y: auto;
+}
+
+/* ============================= */
+/* COLLAPSE FIX */
+/* ============================= */
+
+.sa-layout-wrapper.sidebar-collapsed .sa-sidebar {
+  width: 70px;
+  min-width: 70px;
+}
+
+.sa-layout-wrapper.sidebar-collapsed .ta-menu-item {
+  justify-content: center;
+}
+
+.sa-layout-wrapper.sidebar-collapsed .ta-menu-item span,
+.sa-layout-wrapper.sidebar-collapsed .ta-menu-title,
+.sa-layout-wrapper.sidebar-collapsed .sa-badge {
+  display: none;
+}
+
+/* ============================= */
+/* SCROLLBAR CLEAN */
+/* ============================= */
+
+.ta-sidebar-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ta-sidebar-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+}
+
+
+/* FIX LOGO SIZE */
+.ta-sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+
+.ta-sidebar-header h6 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ta-sidebar-header small {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+
+/* LOGO BOX */
+.ta-logo-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+/* LOGO IMAGE (IMPORTANT) */
+.ta-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* prevents stretching */
+}
+
+
+/* FIX LOGO SIZE (IMPORTANT) */
+.ta-logo-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 10px;
+  overflow: hidden; /* prevent overflow */
+  background: #4f8ef7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ta-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keeps aspect ratio */
+}
+

@@ -1,0 +1,323 @@
+/* CandidateDigitalLogbookDetails.css */
+.cdld-wrapper {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cdld-back-btn {
+  background: #f0f2f5;
+  color: #1a1a1a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.cdld-back-btn:hover {
+  background: #e4e6e9;
+  transform: translateX(-5px);
+}
+
+.cdld-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.cdld-header-content {
+  max-width: 100%;
+}
+
+.cdld-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.cdld-header-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cdld-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.cdld-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.cdld-status-badge.approved {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.cdld-status-badge.pending {
+  background: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+}
+
+.cdld-status-badge.rejected {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.cdld-tabs {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.cdld-tab {
+  background: none;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cdld-tab:hover {
+  color: #667eea;
+}
+
+.cdld-tab.active {
+  color: #667eea;
+  border-bottom: 3px solid #667eea;
+}
+
+.cdld-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cdld-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cdld-duration-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.cdld-duration-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.cdld-duration-label {
+  font-weight: 500;
+  color: #666;
+}
+
+.cdld-duration-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.cdld-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cdld-info-item {
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.cdld-info-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.cdld-info-item label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cdld-info-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cdld-description {
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.cdld-evidence-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.cdld-evidence-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.cdld-evidence-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.cdld-evidence-icon {
+  font-size: 2rem;
+  color: #667eea;
+}
+
+.cdld-evidence-info {
+  flex: 1;
+}
+
+.cdld-evidence-filename {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #1a1a1a;
+}
+
+.cdld-evidence-meta,
+.cdld-evidence-date {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.cdld-evidence-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cdld-evidence-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cdld-evidence-btn.view {
+  background: #667eea;
+  color: white;
+}
+
+.cdld-evidence-btn.view:hover {
+  background: #5a67d8;
+}
+
+.cdld-evidence-btn.download {
+  background: #48bb78;
+  color: white;
+}
+
+.cdld-evidence-btn.download:hover {
+  background: #38a169;
+}
+
+.cdld-review-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cdld-review-comments {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .cdld-wrapper {
+    padding: 10px;
+  }
+  
+  .cdld-header {
+    padding: 20px;
+  }
+  
+  .cdld-title {
+    font-size: 1.5rem;
+  }
+  
+  .cdld-tabs {
+    overflow-x: auto;
+  }
+  
+  .cdld-tab {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .cdld-info-grid,
+  .cdld-duration-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .cdld-evidence-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cdld-evidence-actions {
+    justify-content: center;
+  }
+}

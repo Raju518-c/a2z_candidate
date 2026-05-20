@@ -1,0 +1,142 @@
+.ac-wrapper {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ac-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.ac-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.ac-header p {
+  margin: 8px 0 0;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.ac-error {
+  margin-bottom: 20px;
+}
+
+.ac-form-container {
+  margin-top: 20px;
+}
+
+.ac-form-container .form-label {
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.ac-form-container .form-control {
+  border-radius: 8px;
+  border: 1px solid #dcdde1;
+  padding: 10px 12px;
+  transition: all 0.3s ease;
+}
+
+.ac-form-container .form-control:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.ac-form-container textarea.form-control {
+  resize: vertical;
+}
+
+.ac-note {
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.ac-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.ac-actions .btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.ac-actions .btn-primary {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.ac-actions .btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.ac-actions .btn-danger {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.ac-actions .btn-danger:hover {
+  background-color: #c0392b;
+  border-color: #c0392b;
+}
+
+.ac-actions .btn-outline-secondary:hover {
+  background-color: #95a5a6;
+  border-color: #95a5a6;
+  color: white;
+}
+
+/* Checkbox styling */
+.form-check {
+  padding-left: 1.5rem;
+}
+
+.form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.15em;
+}
+
+.form-check-label {
+  margin-left: 0.5rem;
+  font-weight: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ac-wrapper {
+    padding: 16px;
+  }
+  
+  .ac-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ac-actions {
+    flex-direction: column;
+  }
+  
+  .ac-actions .btn {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}

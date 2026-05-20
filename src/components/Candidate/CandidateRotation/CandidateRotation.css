@@ -1,0 +1,342 @@
+/* ================= MAIN LAYOUT ================= */
+
+.dr-layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.dr-main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin-left: 250px; /* Account for sidebar width */
+  transition: margin-left 0.3s ease;
+}
+
+.dr-content-area {
+  padding: 20px 25px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* When sidebar is collapsed (if applicable) */
+.sidebar-collapsed .dr-main-wrapper {
+  margin-left: 70px;
+}
+
+/* ================= HEADER CARD ================= */
+
+.drp-header-card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: white;
+}
+
+.drp-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.drp-subtitle {
+  color: #6c757d;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.drp-progress-wrapper {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.drp-progress-bar {
+  height: 8px;
+  border-radius: 10px;
+  background: #e9ecef;
+  margin: 10px 0;
+}
+
+.drp-progress-bar .progress-bar {
+  background: #2f80ed;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.drp-progress-count {
+  font-weight: 700;
+  color: #2f80ed;
+}
+
+.drp-current {
+  color: #2f80ed;
+  font-weight: 600;
+  margin: 0;
+}
+
+.drp-muted {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+
+/* ================= DEPARTMENT CARDS ================= */
+
+.drp-department-card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: white;
+  transition: transform 0.2s ease;
+}
+
+.drp-department-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.drp-success-icon {
+  color: #28a745;
+  font-size: 22px;
+}
+
+.drp-meta {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.drp-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.drp-score {
+  color: #28a745;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+
+/* ================= TAGS ================= */
+
+.drp-tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.drp-tag {
+  background: #e6f4f1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+
+/* ================= ACTIVE CARD ================= */
+
+.drp-active-card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: white;
+  border-left: 4px solid #0d6efd;
+}
+
+.drp-active-icon {
+  background: #e8f3ff;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #2f80ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 48px;
+}
+
+
+/* ================= UPCOMING ================= */
+
+.drp-upcoming-card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: white;
+}
+
+/* .drp-upcoming-item {
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+} */
+
+.drp-upcoming-item:last-child {
+  border-bottom: none;
+}
+
+.drp-upcoming-index {
+  background: #f1f3f5;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #495057;
+}
+
+
+/* ================= ABOUT BOX ================= */
+
+.drp-about-card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: white;
+}
+
+.drp-about-box {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  height: 100%;
+  border: 1px solid #e9ecef;
+}
+
+.drp-about-box h6 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .dr-main-wrapper {
+    margin-left: 0;
+  }
+  
+  .dr-content-area {
+    padding: 15px;
+  }
+  
+  .drp-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .drp-about-box {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dr-content-area {
+    padding: 15px;
+  }
+  
+  .drp-header-card .card-body {
+    padding: 20px;
+  }
+  
+  .drp-progress-wrapper .d-flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+  
+  .drp-meta span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .drp-department-card .d-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .drp-department-card .text-md-end {
+    text-align: left !important;
+  }
+  
+  .drp-tag-group {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .dr-content-area {
+    padding: 10px;
+  }
+  
+  .drp-active-card .d-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .drp-tag {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+/* .drp-upcoming-item {
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+} */
+
+.drp-upcoming-item:last-child {
+  border-bottom: none;
+}
+
+.drp-upcoming-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #2c3e50;
+}
+
+.drp-upcoming-desc {
+  font-size: 14px;
+  color: #7b8a9a;
+  margin-bottom: 6px;
+}
+
+
+/* ================= UPCOMING ================= */
+
+.drp-upcoming-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+/* Add spacing BETWEEN items */
+.drp-upcoming-item + .drp-upcoming-item {
+  margin-top: 14px;
+}
+
+/* Optional hover polish */
+.drp-upcoming-item:hover {
+  background: #f8fafc;
+}

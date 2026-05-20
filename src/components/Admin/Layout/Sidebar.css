@@ -1,0 +1,109 @@
+/* Sidebar Footer */
+.ta-sidebar-footer {
+  padding: 14px 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.15);
+
+   /* ADD THIS */
+  overflow-x: auto;
+  overflow-y: hidden;
+
+}
+
+/* Wrapper */
+.ta-user-info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+    /* ADD THIS */
+  min-width: max-content;
+}
+
+/* Avatar */
+.ta-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.ta-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Name + Email container */
+.ta-user-details{
+  flex:1;
+  min-width:0;
+
+    /* ADD THIS */
+  overflow-x: auto;
+
+}
+
+/* Name */
+.ta-user-name{
+  margin:0;
+  font-size:14px;
+  font-weight:600;
+  color:#ffffff;
+  line-height:1.2;
+}
+
+/* Email */
+.ta-user-email{
+  font-size:12px;
+  color:#9ca3af;
+  display:block;
+  white-space:nowrap;
+  /* REMOVE ellipsis */
+  overflow-x:auto;
+  text-overflow:unset;
+}
+
+/* Logout button */
+.ta-logout-btn{
+  width:34px;
+  height:34px;
+  border-radius:6px;
+  border:none;
+  background:#374151;
+  color:#e5e7eb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:all .2s ease;
+  flex-shrink:0;
+}
+
+.ta-logout-btn:hover{
+  background:#ef4444;
+  color:#fff;
+}
+
+.ta-logout-btn svg{
+  font-size:15px;
+}
+
+
+.ta-sidebar-footer::-webkit-scrollbar {
+  height: 4px;
+}
+
+.ta-sidebar-footer::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}

@@ -1,0 +1,305 @@
+/* MentorLogbookDetails.css */
+.mlb-wrapper {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mlb-back-btn {
+  background: #f0f2f5;
+  color: #1a1a1a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.mlb-back-btn:hover {
+  background: #e4e6e9;
+  transform: translateX(-5px);
+}
+
+.mlb-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.mlb-header-content {
+  max-width: 100%;
+}
+
+.mlb-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.mlb-header-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mlb-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.mlb-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.mlb-status-badge.approved {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.mlb-status-badge.pending {
+  background: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+}
+
+.mlb-status-badge.rejected {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.mlb-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mlb-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mlb-duration-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.mlb-duration-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.mlb-duration-label {
+  font-weight: 500;
+  color: #666;
+}
+
+.mlb-duration-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.mlb-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.mlb-info-item {
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.mlb-info-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.mlb-info-item label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mlb-info-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mlb-description {
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.mlb-evidence-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.mlb-evidence-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.mlb-evidence-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.mlb-evidence-icon {
+  font-size: 2rem;
+  color: #667eea;
+}
+
+.mlb-evidence-info {
+  flex: 1;
+}
+
+.mlb-evidence-filename {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #1a1a1a;
+}
+
+.mlb-evidence-meta,
+.mlb-evidence-date {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.mlb-evidence-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.mlb-evidence-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mlb-evidence-btn.view {
+  background: #667eea;
+  color: white;
+}
+
+.mlb-evidence-btn.view:hover {
+  background: #5a67d8;
+}
+
+.mlb-evidence-btn.download {
+  background: #48bb78;
+  color: white;
+}
+
+.mlb-evidence-btn.download:hover {
+  background: #38a169;
+}
+
+.mlb-review-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.mlb-review-comments {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.mlb-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.mlb-spinner {
+  font-size: 40px;
+  color: #667eea;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .mlb-wrapper {
+    padding: 10px;
+  }
+  
+  .mlb-header {
+    padding: 20px;
+  }
+  
+  .mlb-title {
+    font-size: 1.5rem;
+  }
+  
+  .mlb-info-grid,
+  .mlb-duration-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .mlb-evidence-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .mlb-evidence-actions {
+    justify-content: center;
+  }
+}

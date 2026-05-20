@@ -1,0 +1,336 @@
+.ta-candidates-page {
+  padding: 10px;
+}
+
+/* Filters */
+.ta-candidates-search {
+  max-width: 300px;
+}
+
+.ta-candidates-select {
+  width: 160px;
+}
+
+.ta-candidates-export {
+  border: 1px solid #ddd;
+  background: white;
+}
+
+/* Stat Cards */
+.ta-candidates-stat {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+}
+
+.ta-candidates-stat h3 {
+  margin-bottom: 5px;
+}
+
+.ta-stat-green h3 {
+  color: #18a06a;
+}
+
+.ta-stat-orange h3 {
+  color: #d97706;
+}
+
+.ta-stat-blue h3 {
+  color: #2563eb;
+}
+
+/* Table Card */
+.ta-candidates-table-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+/* Candidate Cell */
+.ta-candidate-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Avatar */
+.ta-candidate-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* Level Badge */
+.ta-badge-level {
+  background: #dbeafe;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Status */
+.ta-status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.ta-status-green {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.ta-status-orange {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+
+/* Additional styles for dynamic content */
+.ta-department-tag {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.ta-badge-level {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.ta-status-blue {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.ta-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #6c757d;
+}
+
+.ta-spinner {
+  animation: spin 1s linear infinite;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0d6efd;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ta-error-container {
+  text-align: center;
+  padding: 3rem;
+  color: #dc3545;
+}
+
+.ta-error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Progress bar styles */
+.progress {
+  background-color: #e9ecef;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  .ta-candidates-filters {
+    flex-wrap: wrap;
+  }
+
+  .ta-candidates-search,
+  .ta-candidates-select {
+    min-width: 200px;
+  }
+}
+
+
+/* Additional status colors */
+.ta-stat-purple {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+}
+
+.ta-stat-purple h3 {
+  color: #7c3aed;
+}
+
+.ta-status-blue {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* Badge styles */
+.ta-badge-level {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.ta-department-tag {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Progress bar */
+.progress-bar {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Loading and error states */
+.ta-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #6c757d;
+}
+
+.ta-spinner {
+  animation: spin 1s linear infinite;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0d6efd;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ta-error-container {
+  text-align: center;
+  padding: 3rem;
+  color: #dc3545;
+}
+
+.ta-error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Add this to your existing MentorCandidates.css */
+
+/* View Competency Button */
+.ta-view-competency-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.ta-view-competency-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46a1 100%);
+}
+
+.ta-view-competency-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.ta-view-competency-btn svg {
+  font-size: 12px;
+}
+
+/* Actions column styling */
+.ta-candidates-table-card td:last-child {
+  min-width: 140px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ta-view-competency-btn {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+  
+  .ta-candidates-table-card td:last-child {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ta-view-competency-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+  
+  .ta-view-competency-btn svg {
+    margin-right: 2px;
+  }
+}

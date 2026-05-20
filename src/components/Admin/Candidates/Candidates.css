@@ -1,0 +1,420 @@
+/* Wrapper */
+.candidates-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Header */
+.candidates-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.candidates-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.candidates-header p {
+  color: #6b7280;
+  margin: 4px 0 0;
+}
+
+.candidates-add-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+/* Filters */
+/* Filters Outer Box */
+.candidates-filters-box {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+/* Filters Row */
+.candidates-filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Search */
+.candidates-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff;
+  height: 44px;
+}
+
+.candidates-search svg {
+  color: #6b7280;
+}
+
+.candidates-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Selects (override bootstrap look) */
+.candidates-select {
+  height: 44px;
+  min-width: 160px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 0 12px;
+  background: #fff;
+  font-size: 14px;
+}
+
+/* Filter Icon Button */
+.candidates-filter-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  display: flex;
+  align-items: center;
+ justify-content: center;
+  cursor: pointer;
+}
+
+.candidates-filter-btn svg {
+  color: #111827;
+}
+
+
+
+/* Table */
+.candidates-table-wrapper {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.candidates-table {
+  margin: 0;
+}
+
+.candidates-table thead {
+  background: #f9fafb;
+}
+
+.candidates-table th {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.candidates-name {
+  font-weight: 600;
+}
+
+/* Level Badge */
+.candidates-level {
+  background: #e5edff;
+  color: #2563eb;
+  font-weight: 600;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pills */
+.candidates-pill {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.candidates-pill.compliant {
+  background: #e7f7ee;
+  color: #16a34a;
+}
+
+.candidates-pill.pending {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.candidates-pill.noncompliant {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.candidates-pill.active {
+  background: #e7f7ee;
+  color: #16a34a;
+}
+
+.candidates-pill.blocked {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Actions */
+.candidates-action-icon {
+  cursor: pointer;
+  color: #6b7280;
+}
+
+
+.candidates-table-wrapper {
+  background: #ffffff;
+}
+
+
+/* Loading and error states */
+.candidates-loading,
+.candidates-error {
+  text-align: center;
+  padding: 40px;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.candidates-error {
+  color: #dc2626;
+}
+
+.candidates-error button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.candidates-error button:hover {
+  background: #2563eb;
+}
+
+.text-center {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+
+/* Action Icons */
+.action-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.candidates-action-icon {
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.candidates-action-icon.edit-icon {
+  color: #4a6cf7;
+}
+
+.candidates-action-icon.edit-icon:hover {
+  color: #2b4cd7;
+  transform: scale(1.1);
+}
+
+.candidates-action-icon.delete-icon {
+  color: #dc3545;
+}
+
+.candidates-action-icon.delete-icon:hover {
+  color: #bb2d3b;
+  transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.2s ease;
+}
+
+.modal-content h3 {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.modal-content p {
+  margin: 0 0 24px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.modal-actions .btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.modal-actions .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal-actions .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.modal-actions .btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.modal-actions .btn-danger:hover {
+  background-color: #bb2d3b;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Disable text selection for icons */
+.candidates-action-icon {
+  user-select: none;
+}
+
+
+/* Status pills for candidates */
+.candidates-pill.status-approved {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.candidates-pill.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.candidates-pill.status-rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Action icons */
+.candidates-action-icon {
+  transition: all 0.3s ease;
+}
+
+.candidates-action-icon.approve-icon:hover {
+  transform: scale(1.1);
+}
+
+.candidates-action-icon.reject-icon:hover {
+  transform: scale(1.1);
+}
+
+
+/* Status pills for candidates - Updated to match API values */
+.candidates-pill.status-active {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.candidates-pill.status-inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.candidates-pill.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}

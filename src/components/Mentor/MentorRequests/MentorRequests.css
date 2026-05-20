@@ -1,0 +1,267 @@
+/* Mentor Requests Page Styles */
+.mr-page {
+  padding: 1.5rem;
+}
+
+/* Loading State */
+.ta-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #6c757d;
+}
+
+.ta-spinner {
+  animation: spin 1s linear infinite;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0d6efd;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Stat Cards */
+.mr-stat-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s;
+}
+
+.mr-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.mr-stat-card h3 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.mr-stat-card p {
+  margin: 0.25rem 0 0;
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.mr-stat-warning {
+  border-left: 4px solid #ffc107;
+}
+
+.mr-stat-success {
+  border-left: 4px solid #28a745;
+}
+
+.mr-stat-info {
+  border-left: 4px solid #17a2b8;
+}
+
+.mr-stat-danger {
+  border-left: 4px solid #dc3545;
+}
+
+/* Filters */
+.mr-filters {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border: 1px solid #e9ecef;
+}
+
+/* Table Card */
+.mr-table-card {
+  background: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e9ecef;
+  overflow: hidden;
+}
+
+.mr-table-card table {
+  margin-bottom: 0;
+}
+
+.mr-table-card thead {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.mr-table-card thead th {
+  padding: 1rem;
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mr-table-card tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+/* Candidate Cell */
+.mr-candidate-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mr-candidate-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Department Tag */
+.mr-department-tag {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Level Badge */
+.mr-level-badge {
+  background-color: #cce5ff;
+  color: #004085;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Date Cell */
+.mr-date-cell {
+  font-size: 0.875rem;
+  color: #495057;
+}
+
+/* Status Badge */
+.mr-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Progress Cell */
+.mr-progress-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 100px;
+}
+
+.mr-progress-bar {
+  flex: 1;
+  height: 6px;
+  background-color: #e9ecef;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mr-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.mr-progress-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #495057;
+  min-width: 35px;
+}
+
+/* Action Buttons */
+.mr-action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mr-action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 0.375rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: white;
+}
+
+.mr-view-btn {
+  background-color: #6c757d;
+}
+
+.mr-view-btn:hover {
+  background-color: #5a6268;
+}
+
+.mr-accept-btn {
+  background-color: #28a745;
+}
+
+.mr-accept-btn:hover {
+  background-color: #218838;
+}
+
+.mr-reject-btn {
+  background-color: #dc3545;
+}
+
+.mr-reject-btn:hover {
+  background-color: #c82333;
+}
+
+/* Empty State */
+.mr-empty-state {
+  padding: 3rem;
+  text-align: center;
+  color: #6c757d;
+}
+
+.mr-empty-state p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mr-page {
+    padding: 1rem;
+  }
+  
+  .mr-table-card {
+    overflow-x: auto;
+  }
+  
+  .mr-action-buttons {
+    flex-wrap: wrap;
+  }
+}
+
